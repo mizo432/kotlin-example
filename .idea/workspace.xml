@@ -5,97 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20652c0b-fbac-41cb-b03c-83030a4927d5" name="変更" comment="初期コミット">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/department-service.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/ppt-service.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api-gateway/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api-gateway/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api-gateway/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api-gateway/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api-gateway/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api-gateway/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api-gateway/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api-gateway/src/main/java/com/undefined/ApiGatewayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api-gateway/src/test/java/com/undefined/api/gateway/ApiGatewayApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config-server/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config-server/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config-server/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config-server/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config-server/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config-server/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config-server/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config-server/src/main/java/com/undefined/ConfigServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config-server/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config-server/src/main/resources/config/API-GATEWAY.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config-server/src/main/resources/config/CUSTOMER-SERVICE.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config-server/src/main/resources/config/DEPARTMENT-SERVICE.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config-server/src/main/resources/config/EMPLOYEE-SERVICE.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config-server/src/main/resources/config/PPT-SERVICE.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config-server/src/main/resources/config/WEB-BACKEND.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config-server/src/test/java/com/undefined/ConfigServerApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/customer-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/customer-service/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/customer-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/customer-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/customer-service/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/customer-service/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/customer-service/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/customer-service/src/main/java/com.undecided/CustomerServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/customer-service/src/main/java/com.undecided/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/customer-service/src/main/java/com/undecided/ppt/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/customer-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/customer-service/src/test/java/undecided/ppt/CustomerServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/department-service/src/main/http/depertments/postDepertment.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/department-service/src/main/java/undefined/DepartmentServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/department-service/src/main/java/undefined/common/EntityNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/department-service/src/main/java/undefined/department/appl/command/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/department-service/src/main/java/undefined/department/appl/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/department-service/src/main/java/undefined/department/appl/query/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/department-service/src/main/java/undefined/department/infra/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/department-service/src/main/java/undefined/department/model/department/Department.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/department-service/src/main/java/undefined/department/model/department/DepartmentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/department-service/src/main/java/undefined/department/model/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/department-service/src/main/java/undefined/department/presentation/api/department/DepartmentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/department-service/src/main/java/undefined/department/presentation/api/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/department-service/src/main/java/undefined/department/presentation/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/department-service/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/department-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/department-service/src/main/resources/db/migration/V20231021143733__create_tables.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/ppt-service/src/main/java/com/undecided/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/ppt-service/src/main/java/com/undecided/party/Party.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/ppt-service/src/main/java/com/undecided/party/organization/Organization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/ppt-service/src/main/java/com/undecided/party/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/ppt-service/src/main/java/com/undecided/party/person/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/ppt-service/src/main/java/com/undecided/party/person/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/ppt-service/src/main/java/com/undecided/place/Place.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/ppt-service/src/main/java/com/undecided/ppt/Resource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/ppt-service/src/main/java/com/undecided/ppt/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/ppt-service/src/main/java/com/undecided/thing/Thing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/ppt-service/src/main/java/com/undecided/thing/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/ppt-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/service-registry/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/service-registry/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/service-registry/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/service-registry/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/service-registry/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/service-registry/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/service-registry/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/service-registry/src/main/java/com/undefined/ServiceRegistryApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/service-registry/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/service-registry/src/test/java/com/undefined/serviceregistry/ServiceRegistryApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kotolin-example.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -444,8 +355,8 @@
         <item itemvalue="Gradle.customer-service [bootRun]" />
         <item itemvalue="Gradle.employee-service [bootRun]" />
         <item itemvalue="Gradle.department-service [bootRun]" />
-        <item itemvalue="Gradle.ppt-service [bootRun]" />
         <item itemvalue="Gradle.api-gateway [bootRun]" />
+        <item itemvalue="Gradle.ppt-service [bootRun]" />
       </list>
     </recent_temporary>
   </component>
@@ -454,6 +365,7 @@
     <option name="files">
       <set>
         <option value="$PROJECT_DIR$/backend/department-service/build.gradle.kts" />
+        <option value="$PROJECT_DIR$/backend/ppt-service/build.gradle.kts" />
         <option value="$PROJECT_DIR$/backend/ppt-service/settings.gradle.kts" />
       </set>
     </option>
@@ -474,7 +386,7 @@
       <workItem from="1698528882969" duration="10959000" />
       <workItem from="1698983059341" duration="60000" />
       <workItem from="1698983141813" duration="1473000" />
-      <workItem from="1698984635050" duration="4712000" />
+      <workItem from="1698984635050" duration="6228000" />
     </task>
     <task id="LOCAL-00001" summary="初期コミット">
       <option name="closed" value="true" />
@@ -484,7 +396,23 @@
       <option name="project" value="LOCAL" />
       <updated>1697853418659</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="初期コミット">
+      <option name="closed" value="true" />
+      <created>1699218465163</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699218465164</updated>
+    </task>
+    <task id="LOCAL-00003" summary="初期コミット">
+      <option name="closed" value="true" />
+      <created>1699218480148</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699218480148</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

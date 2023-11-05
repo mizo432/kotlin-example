@@ -8,10 +8,11 @@
 
 # 業務API
 
-| サービス               | 摘要      | port |
-|--------------------|---------|-----:|
-| department-service | 部署サービス  | 8081 |
-| employee-service   | 従業員サービス | 8082 |
+| サービス               | 摘要      | port | Language | note                              |
+|--------------------|---------|-----:|:---------|:----------------------------------|
+| department-service | 部署サービス  | 8081 | Java     | RestController, Jpa               |
+| employee-service   | 従業員サービス | 8082 | Java     | RestController, Jpa, RestTemplate |
+| customer-service   | 従業員サービス | 8082 | Java     | RestController, Jpa, WebClient    |
 
 # 業務外サービス
 
