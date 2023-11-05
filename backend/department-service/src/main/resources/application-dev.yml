@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/kotlin_db
+    username: user
+    password: password
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connection-timeout: 20000 #maximum number of milliseconds that a client will wait for a connection
+      minimum-idle: 5 #minimum number of idle connections maintained by HikariCP in a connection pool
+      maximum-pool-size: 10 #maximum pool size
+      idle-timeout: 600000 #maximum idle time for connection
+      max-lifetime: 1800000 #maximum lifetime in milliseconds of a connection in the pool after it is closed.
+      auto-commit: true #default auto-commit behavior.
+      connection-test-query: select 1
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+        globally_quoted_identifiers_skip_column_definitions: true
+    hibernate:
+      ddl-auto:
+  config:
+    import: "optional:configserver:http://localhost:8888"
+
+
+logging:
+  level:
+    web: DEBUG
+

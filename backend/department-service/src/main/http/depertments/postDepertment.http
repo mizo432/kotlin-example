@@ -1,0 +1,23 @@
+### Get findAllDepartments
+GET http://localhost:8081/departments
+
+### Get findOneById
+GET http://localhost:8081/departments/1
+
+### Post deleteById 2
+DELETE http://localhost:8081/departments/2
+
+### Get findOneById on notFound
+GET http://localhost:8081/departments/2
+
+### Post findOneById on notFound
+POST http://localhost:8081/departments
+Content-Type: application/json
+
+{
+  "departmentId": 2,
+  "name": "組織名2"
+}
+
+### Post findOneById 2
+GET http://localhost:8081/departments/2
