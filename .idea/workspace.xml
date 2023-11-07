@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20652c0b-fbac-41cb-b03c-83030a4927d5" name="変更" comment="初期コミット">
+    <list default="true" id="20652c0b-fbac-41cb-b03c-83030a4927d5" name="変更" comment="doc(README.md):change README.md">
+      <change afterPath="$PROJECT_DIR$/front/web-front-java/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/front/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -352,11 +355,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.customer-service [bootRun]" />
+        <item itemvalue="Gradle.ppt-service [bootRun]" />
         <item itemvalue="Gradle.employee-service [bootRun]" />
         <item itemvalue="Gradle.department-service [bootRun]" />
+        <item itemvalue="Gradle.customer-service [bootRun]" />
         <item itemvalue="Gradle.api-gateway [bootRun]" />
-        <item itemvalue="Gradle.ppt-service [bootRun]" />
       </list>
     </recent_temporary>
   </component>
@@ -386,7 +389,9 @@
       <workItem from="1698528882969" duration="10959000" />
       <workItem from="1698983059341" duration="60000" />
       <workItem from="1698983141813" duration="1473000" />
-      <workItem from="1698984635050" duration="6228000" />
+      <workItem from="1698984635050" duration="6353000" />
+      <workItem from="1699308653695" duration="452000" />
+      <workItem from="1699392131818" duration="1530000" />
     </task>
     <task id="LOCAL-00001" summary="初期コミット">
       <option name="closed" value="true" />
@@ -412,7 +417,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699218480148</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="初期コミット">
+      <option name="closed" value="true" />
+      <created>1699220613817</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699220613817</updated>
+    </task>
+    <task id="LOCAL-00005" summary="doc(README.md):change README.md">
+      <option name="closed" value="true" />
+      <created>1699309058563</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699309058563</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,6 +441,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初期コミット" />
-    <option name="LAST_COMMIT_MESSAGE" value="初期コミット" />
+    <MESSAGE value="doc(README.md):change README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="doc(README.md):change README.md" />
   </component>
 </project>

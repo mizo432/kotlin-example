@@ -23,3 +23,22 @@
 | api-gateway      | APIゲートウェイ  | 8080 |
 | config-service   | コンフィグサーバー  | 8888 |
 
+# application layers
+
+* [root]
+    * [domain root]
+        * [usecase layer]
+            * command
+            * query
+        * [domain layer]
+        * [infra layer]
+            * query
+            * datasource
+            * remoting
+            * ...other channel
+    * [presentation]
+        * web
+        * api
+        * applicationEvent
+        * scheduled
+        * ... other bootstrap
