@@ -13,7 +13,7 @@
 | department-service | 部署サービス   | 8081 | Java     | RestController, Jpa               |
 | employee-service   | 従業員サービス  | 8082 | Java     | RestController, Jpa, RestTemplate |
 | customer-service   | 従業員サービス  | 8084 | Java     | RestController, Jpa, WebClient    |
-| ppt-service        | リソースサービス | 8083 | Java     | RestController, R2DBC             |
+| ppt-service        | リソースサービス | 8083 | Java     | RestController, Doma2             |
 
 # 業務外サービス
 
