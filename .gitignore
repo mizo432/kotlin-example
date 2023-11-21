@@ -1,3 +1,6 @@
 /.idea
+/.idea/
 /.gradle
 /.build
+/backend/admin-server/build/logs/
+/backend/admin-server/.gradle
