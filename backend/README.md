@@ -14,6 +14,7 @@
 | employee-service   | 従業員サービス  | 8082 | Java     | RestController, Jpa, RestTemplate |
 | customer-service   | 顧客サービス   | 8084 | Java     | RestController, Jpa, WebClient    |
 | ppt-service        | リソースサービス | 8083 | Java     | RestController, Doma2             |
+| address-service    | 住所サービス   | 8084 | Java     | RestController, R2dbc, WebFlux    |
 
 # 業務外サービス
 

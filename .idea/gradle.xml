@@ -4,6 +4,24 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/backend/address-service" />
+        <option name="gradleJvm" value="corretto-18" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/backend/address-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/backend/admin-server" />
+        <option name="gradleJvm" value="corretto-18" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/backend/admin-server" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/backend/api-gateway" />
         <option name="gradleJvm" value="corretto-18" />
         <option name="modules">

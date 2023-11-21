@@ -1,15 +1,18 @@
-package com.undefined;
+package com.undecided.systemAdmin;
 
+import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
+@EnableAdminServer
 @EnableDiscoveryClient
-public class ApiGatewayApplication {
+public class WebAdminApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ApiGatewayApplication.class, args);
+        SpringApplication.run(WebAdminApplication.class, args);
+
     }
 
 }
