@@ -1,4 +1,4 @@
-package com.undecided.adress.model.prefecture;
+package com.undecided.address.model.prefecture;
 
 public enum Prefecture {
     北海道("01",	"北海道"),

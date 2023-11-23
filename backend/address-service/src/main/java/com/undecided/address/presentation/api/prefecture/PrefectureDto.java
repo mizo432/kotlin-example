@@ -1,6 +1,6 @@
-package com.undecided.adress.presentation.api.prefecture;
+package com.undecided.address.presentation.api.prefecture;
 
-import com.undecided.adress.model.prefecture.Prefecture;
+import com.undecided.address.model.prefecture.Prefecture;
 
 import java.util.ArrayList;
 import java.util.List;

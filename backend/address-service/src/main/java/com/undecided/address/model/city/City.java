@@ -1,4 +1,4 @@
-package com.undecided.adress.model.city;
+package com.undecided.address.model.city;
 
 public class City {
     private final String code;

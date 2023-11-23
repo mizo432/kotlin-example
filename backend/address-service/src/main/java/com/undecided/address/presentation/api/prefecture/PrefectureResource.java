@@ -1,6 +1,6 @@
-package com.undecided.adress.presentation.api.prefecture;
+package com.undecided.address.presentation.api.prefecture;
 
-import com.undecided.adress.model.prefecture.Prefecture;
+import com.undecided.address.model.prefecture.Prefecture;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,7 +11,7 @@ import reactor.core.publisher.Mono;
 @RequestMapping(path = "/api/v1/prefectures")
 public class PrefectureResource {
     @RequestMapping("")
-    public Flux<PrefectureDto> findAll(){
+    public Flux<PrefectureDto> selectAll(){
       return Flux.just(PrefecturesDto.convertFrom(Prefecture.values()));
     }
     @RequestMapping("{prefectureCode}")
