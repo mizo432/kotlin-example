@@ -17,6 +17,8 @@ apply plugin: 'com.github.spotbugs'
 apply plugin: 'jacoco'
 apply plugin: 'com.github.ben-manes.versions'
 
+group = 'com.undefined'
+version = '0.0.1-SNAPSHOT'
 
 springBoot {
     buildInfo()
