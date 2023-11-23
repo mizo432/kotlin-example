@@ -12,6 +12,8 @@ spring:
 logging:
   file:
     name: ./build/logs/addressServiceApplication.log
+  level:
+    web: WARN
 
 management:
   endpoint:

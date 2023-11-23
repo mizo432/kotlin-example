@@ -6,7 +6,7 @@ plugins {
     id("se.patrikerdes.use-latest-versions") version "0.2.18"
 }
 
-group = 'com.undefined'
+group = 'undefined'
 version = '0.0.1-SNAPSHOT'
 
 java {

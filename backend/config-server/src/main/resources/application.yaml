@@ -11,6 +11,10 @@ spring:
       server:
         native:
           search-locations: "classpath:/config/"
+  boot:
+    admin:
+      client:
+        url: "http://localhost:8090/admin"
 
 eureka:
   client:
@@ -26,6 +30,11 @@ management:
       exposure:
         include: "*"
 
+logging:
+  file:
+    name: ./build/logs/configServerApplication.log
+  level:
+    web: WARN
 
 
 
