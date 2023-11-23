@@ -7,8 +7,8 @@ spring:
     admin:
       client:
         url: "http://localhost:8090/admin"
-        instance:
-          service-host-type: ip
+#        instance:
+#          service-host-type: ip
 logging:
   file:
     name: ./build/logs/addressServiceApplication.log

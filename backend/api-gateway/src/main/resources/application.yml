@@ -7,15 +7,13 @@ spring:
     admin:
       client:
         url: http://localhost:8090/admin
-        instance:
-          service-host-type: ip
   cloud:
     gateway:
       routes:
         - id: ADDRESS-SERVICE
           uri: http://localhost:8085
           predicates:
-            - Path=/api/*/prefectures/**
+            - Path=/api/*/prefectures/**,/api/*/cities/**
 logging:
   file:
     name: ./build/logs/ApiGatewayApplication.log

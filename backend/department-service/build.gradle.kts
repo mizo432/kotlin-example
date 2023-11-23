@@ -1,7 +1,10 @@
 plugins {
     java
+    idea
     id("org.springframework.boot") version "3.1.5"
     id("io.spring.dependency-management") version "1.1.3"
+    id("com.github.ben-manes.versions") version "0.48.0"
+    id("se.patrikerdes.use-latest-versions") version "0.2.18"
 }
 
 group = "undecided"
@@ -10,6 +13,9 @@ version = "0.0.1-SNAPSHOT"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
+}
+springBoot {
+    buildInfo()
 }
 
 configurations {
