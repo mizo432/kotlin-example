@@ -17,13 +17,15 @@ spring:
         - id: ADDRESS-SERVICE
           uri: http://localhost:8085
           predicates:
-            - Path=/api/{apiVersion}/prefectures/**,/api/{apiVersion}/cities/**
+            - Path=/api/{apiVersion}/prefectures/**,/api/{apiVersion}/municipals/**
       httpclient:
         pool:
           max-idle-time: 55s
 logging:
   file:
     name: ./build/logs/ApiGatewayApplication.log
+  level:
+    web: WARN
 
 management:
   endpoint:
