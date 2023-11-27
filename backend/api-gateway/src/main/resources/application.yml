@@ -11,11 +11,11 @@ spring:
     gateway:
       routes:
         - id: DEPARTMENT-SERVICE
-          uri: http://localhost:8081
+          uri: lb://DEPARTMENT-SERVICE
           predicates:
             - Path=/api/{apiVersion}/departments/**
         - id: ADDRESS-SERVICE
-          uri: http://localhost:8085
+          uri: lb://ADDRESS-SERVICE
           predicates:
             - Path=/api/{apiVersion}/prefectures/**,/api/{apiVersion}/municipals/**
       httpclient:
