@@ -10,18 +10,19 @@ import undefined.department.model.department.DepartmentRepository;
 import java.util.List;
 
 @RestController
+@RequestMapping()
 @AllArgsConstructor
 public class DepartmentController {
 
     private final DepartmentRepository departmentRepository;
 
-    @GetMapping("/departments")
+    @GetMapping(path = "/api/v1/departments")
     List<Department> findAll() {
         return departmentRepository.findAll();
 
     }
 
-    @PostMapping("/departments")
+    @PostMapping(path = "/api/v1/departments")
     @ResponseStatus(HttpStatus.CREATED)
     @ResponseBody
     Department newEmployee(@RequestBody Department newEmployee) {
@@ -30,14 +31,14 @@ public class DepartmentController {
 
     // Single item
 
-    @GetMapping("/departments/{id}")
+    @GetMapping(path = "/api/v1/departments/{id}")
     Department one(@PathVariable Long id) {
 
         return departmentRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("department", id));
     }
 
-    @PutMapping("/departments/{id}")
+    @PutMapping(path = "/api/v1/departments/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @ResponseBody
     Department replaceEmployee(@RequestBody Department newDepartment, @PathVariable Long id) {
@@ -51,7 +52,7 @@ public class DepartmentController {
                 });
     }
 
-    @DeleteMapping("/departments/{id}")
+    @DeleteMapping(path = "/api/v1/departments/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void deleteEmployee(@PathVariable Long id) {
         departmentRepository.deleteById(id);

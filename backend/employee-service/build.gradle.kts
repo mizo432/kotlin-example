@@ -1,10 +1,11 @@
 plugins {
     java
     idea
-    id("org.springframework.boot") version "3.1.5"
-    id("io.spring.dependency-management") version "1.1.3"
+    id("org.springframework.boot") version "3.1.6"
+    id("io.spring.dependency-management") version "1.1.4"
     id("com.github.ben-manes.versions") version "0.48.0"
     id("se.patrikerdes.use-latest-versions") version "0.2.18"
+    id("com.gorylenko.gradle-git-properties") version "2.4.1"
 
 }
 
@@ -46,6 +47,7 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
+    implementation("io.zipkin.reporter2:zipkin-reporter-brave")
 }
 
 dependencyManagement {

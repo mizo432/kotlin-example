@@ -10,13 +10,26 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: ADDRESS-SERVICE
-          uri: http://localhost:8085
+        - id: DEPARTMENT-SERVICE
+          uri: lb://DEPARTMENT-SERVICE
           predicates:
-            - Path=/api/*/prefectures/**,/api/*/cities/**
+            - Path=/api/{apiVersion}/departments/**
+        - id: ADDRESS-SERVICE
+          uri: lb://ADDRESS-SERVICE
+          predicates:
+            - Path=/api/{apiVersion}/prefectures/**,/api/{apiVersion}/municipals/**
+        - id: EMPLOYEE-SERVICE
+          uri: lb://EMPLOYEE-SERVICE
+          predicates:
+            - Path=/api/{apiVersion}/employees/**
+      httpclient:
+        pool:
+          max-idle-time: 55s
 logging:
   file:
     name: ./build/logs/ApiGatewayApplication.log
+  level:
+    web: WARN
 
 management:
   endpoint:

@@ -15,11 +15,3 @@ logging:
   level:
     web: WARN
 
-management:
-  endpoint:
-    health:
-      show-details: ALWAYS
-  endpoints:
-    web:
-      exposure:
-        include: "*"

@@ -24,8 +24,9 @@ spring:
   config:
     import: "optional:configserver:http://localhost:8888"
 
-
 logging:
+  file:
+    name: ./build/logs/departmentServiceApplication.log
   level:
     web: WARN
 

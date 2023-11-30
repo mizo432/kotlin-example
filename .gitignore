@@ -4,3 +4,4 @@
 /.build
 /backend/admin-server/build/logs/
 /backend/admin-server/.gradle
+/backend/admin-server/build

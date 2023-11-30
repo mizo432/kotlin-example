@@ -1,19 +1,16 @@
 plugins {
     java
     idea
-    id("org.springframework.boot") version "3.1.5"
-    id("io.spring.dependency-management") version "1.1.3"
+    id("org.springframework.boot") version "3.1.6"
+    id("io.spring.dependency-management") version "1.1.4"
     id("com.github.ben-manes.versions") version "0.48.0"
     id("se.patrikerdes.use-latest-versions") version "0.2.18"
+    id("com.gorylenko.gradle-git-properties") version "2.4.1"
 
 }
 
 group = "undecided"
 version = "0.0.1-SNAPSHOT"
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_17
-}
 
 springBoot {
     buildInfo()
@@ -39,7 +36,7 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
 //    implementation("org.springframework.cloud:spring-cloud-sleuth-zipkin")
 //    implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
-    implementation("de.codecentric:spring-boot-admin-starter-client:3.1.5")
+    implementation("de.codecentric:spring-boot-admin-starter-client:3.1.8")
     implementation("org.springframework.cloud:spring-cloud-starter-config")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     compileOnly("org.projectlombok:lombok")
@@ -49,7 +46,7 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
-
+    implementation("io.zipkin.reporter2:zipkin-reporter-brave")
 }
 
 dependencyManagement {
