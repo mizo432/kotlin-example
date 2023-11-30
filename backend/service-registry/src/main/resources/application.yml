@@ -1,12 +1,12 @@
 server:
   port: ${PORT:8761}
+
 spring:
   application:
     name: service-registry
-  cloud:
-    loadbalancer:
-      ribbon:
-        enabled: false
+#  cloud:
+#    loadbalancer:
+#      enabled: false
 
 
 eureka:
@@ -18,6 +18,8 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-  server:
-    enableSelfPreservation: true
-  shouldUseDns: false
+
+
+#  server:
+#    enableSelfPreservation: true
+#  shouldUseDns: false

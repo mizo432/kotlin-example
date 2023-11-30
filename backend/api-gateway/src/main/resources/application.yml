@@ -18,6 +18,10 @@ spring:
           uri: lb://ADDRESS-SERVICE
           predicates:
             - Path=/api/{apiVersion}/prefectures/**,/api/{apiVersion}/municipals/**
+        - id: EMPLOYEE-SERVICE
+          uri: lb://EMPLOYEE-SERVICE
+          predicates:
+            - Path=/api/{apiVersion}/employees/**
       httpclient:
         pool:
           max-idle-time: 55s
