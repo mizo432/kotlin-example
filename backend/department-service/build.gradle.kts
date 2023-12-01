@@ -37,7 +37,6 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.cloud:spring-cloud-starter-config")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
-    implementation("de.codecentric:spring-boot-admin-starter-client:3.1.5")
     runtimeOnly("org.postgresql:postgresql:42.6.0")
     implementation("org.flywaydb:flyway-core")
     compileOnly("org.projectlombok:lombok")

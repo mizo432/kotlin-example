@@ -3,10 +3,6 @@ spring:
     name: api-gateway
   config:
     import: "optional:configserver:http://localhost:8888"
-  boot:
-    admin:
-      client:
-        url: http://localhost:8090/admin
   cloud:
     gateway:
       routes:
@@ -22,6 +18,10 @@ spring:
           uri: lb://EMPLOYEE-SERVICE
           predicates:
             - Path=/api/{apiVersion}/employees/**
+        - id: INVENTORY-SERVICE
+          uri: lb://INVENTORY-SERVICE
+          predicates:
+            - Path=/api/{apiVersion}/inventories/**
       httpclient:
         pool:
           max-idle-time: 55s
@@ -30,6 +30,7 @@ logging:
     name: ./build/logs/ApiGatewayApplication.log
   level:
     web: WARN
+    root: warn
 
 management:
   endpoint:

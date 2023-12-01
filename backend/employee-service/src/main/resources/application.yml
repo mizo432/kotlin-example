@@ -3,13 +3,11 @@ spring:
     name: employee-service
   config:
     import: "optional:configserver:http://localhost:8888"
-  boot:
-    admin:
-      client:
-        url: "http://localhost:8090/admin"
 logging:
   file:
     name: ./build/logs/employeeServiceApplication.log
+  level:
+    web: warn
 
 management:
   endpoint:

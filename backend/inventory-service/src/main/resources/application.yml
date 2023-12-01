@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: inventory-service
+  config:
+    import: "optional:configserver:http://localhost:8888"
+
+logging:
+  file:
+    name: ./build/logs/inventoryServiceApplication.log
+  level:
+    web: WARN
+

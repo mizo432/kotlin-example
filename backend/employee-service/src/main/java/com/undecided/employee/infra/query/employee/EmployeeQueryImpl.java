@@ -24,8 +24,8 @@ public class EmployeeQueryImpl implements EmployeeQuery {
                         .orElseThrow(() -> new RuntimeException("employees:" + id)))
                 .flatMap((Function<Employee, Mono<EmployeeAssy>>) employee -> {
                     Long departmentId = employee.getDepartmentId();
-                    Mono<Department> departmentMono = departmentClient.findOneById(departmentId);
-                    return EmployeeAssy.reconstruct(employee, departmentMono);
+                    Department department = departmentClient.findOneById(departmentId);
+                    return EmployeeAssy.reconstruct(employee, department);
                 });
     }
 }

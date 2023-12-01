@@ -12,6 +12,8 @@ spring:
 logging:
   file:
     name: ./build/logs/customerServiceApplication.log
+  level:
+    org.springframework.boot.web.embedded.netty: info
 
 management:
   endpoint:

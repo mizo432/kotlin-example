@@ -34,12 +34,11 @@ extra["springCloudVersion"] = "2022.0.4"
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-actuator")
 //	implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
+    implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("io.micrometer:micrometer-tracing-bridge-brave")
-//    implementation("io.zipkin.reporter2:zipkin-reporter-brave")
     implementation("org.springframework.cloud:spring-cloud-starter-config")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
-    implementation("de.codecentric:spring-boot-admin-starter-client:3.1.5")
     compileOnly("org.projectlombok:lombok")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
 //	runtimeOnly("org.postgresql:postgresql")

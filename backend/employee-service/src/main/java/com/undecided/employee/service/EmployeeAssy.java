@@ -14,14 +14,9 @@ import reactor.core.publisher.Mono;
 @AllArgsConstructor
 public class EmployeeAssy {
     private Employee employee;
-    private Department Department;
+    private Department department;
 
-    public static EmployeeAssy reconstruct(Employee employee, Department department) {
-        return new EmployeeAssy(employee, department);
-    }
-
-    @SuppressWarnings("BlockingMethodInNonBlockingContext")
-    public static Mono<EmployeeAssy> reconstruct(Employee employee, Mono<Department> department) {
-        return Mono.just(new EmployeeAssy(employee, department.block()));
+    public static Mono<EmployeeAssy> reconstruct(Employee employee, Department department) {
+        return Mono.just(new EmployeeAssy(employee, department));
     }
 }

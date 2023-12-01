@@ -29,4 +29,9 @@ logging:
     name: ./build/logs/departmentServiceApplication.log
   level:
     web: WARN
+    # root: warn
+    org.springframework.boot.web.embedded.netty: info
+    undefined:
+      DepartmentServiceApplication: info
+
 

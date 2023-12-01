@@ -7,6 +7,7 @@ import com.undecided.employee.service.EmployeeQuery;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Mono;
 
 import java.util.List;
 
@@ -34,8 +35,8 @@ public class EmployeeController {
     // Single item
 
     @GetMapping(path = "/api/v1/employees/{id}")
-    EmployeeAssy one(@PathVariable Long id) {
-        return employeeQuery.findOneBy(id).block();
+    Mono<EmployeeAssy> one(@PathVariable Long id) {
+        return employeeQuery.findOneBy(id);
 
     }
 

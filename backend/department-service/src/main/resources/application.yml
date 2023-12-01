@@ -3,10 +3,4 @@ spring:
     name: department-service
   profiles:
     active: dev
-  boot:
-    admin:
-      client:
-        url: "http://localhost:8090/admin"
-#        instance:
-#          service-host-type: ip
 
