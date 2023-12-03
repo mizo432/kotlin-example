@@ -7,5 +7,7 @@ include 'department-service'
 include 'employee-service'
 include 'customer-service'
 include 'inventory-service'
+include 'cashsale-service'
+include 'productsale-service'
 include 'common'
-
+include 'shared'

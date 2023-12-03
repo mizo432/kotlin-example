@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: cash-sale-service
+  config:
+    import: "optional:configserver:http://localhost:8888"
+
+logging:
+  file:
+    name: ./build/logs/cashSaleServiceApplication.log
+  level:
+    web: WARN
+
