@@ -1,8 +1,10 @@
 package com.undecided.employee.service;
 
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 public interface EmployeeQuery {
-    Mono<EmployeeAssy> findOneBy(Long id);
+    Mono<EmployeeWithDepartment> findOneBy(Long id);
 
+    Flux<EmployeeWithDepartment> getEmployeesWithDepartment();
 }

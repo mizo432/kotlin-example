@@ -3,7 +3,7 @@ plugins {
     idea
     id("org.springframework.boot") version "3.1.6"
     id("io.spring.dependency-management") version "1.1.4"
-    id("com.github.ben-manes.versions") version "0.48.0"
+    id("com.github.ben-manes.versions") version "0.50.0"
     id("se.patrikerdes.use-latest-versions") version "0.2.18"
     id("com.gorylenko.gradle-git-properties") version "2.4.1"
 }
@@ -37,16 +37,15 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.cloud:spring-cloud-starter-config")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
-    runtimeOnly("org.postgresql:postgresql:42.6.0")
+    runtimeOnly("org.postgresql:postgresql:42.7.0")
     implementation("org.flywaydb:flyway-core")
     compileOnly("org.projectlombok:lombok")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    implementation("org.slf4j:slf4j-api:2.0.6")
-    implementation("io.zipkin.reporter2:zipkin-reporter-brave")
-    implementation("io.micrometer:micrometer-tracing-bridge-brave")
-
+    implementation("org.slf4j:slf4j-api:2.0.9")
+    implementation("io.zipkin.reporter2:zipkin-reporter-brave:2.16.3")
+    implementation("io.micrometer:micrometer-tracing-bridge-brave:1.0.3")
 
 }
 

@@ -35,8 +35,6 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-actuator")
 //	implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
-    implementation("io.micrometer:micrometer-tracing-bridge-brave")
-//    implementation("io.zipkin.reporter2:zipkin-reporter-brave")
     implementation("org.springframework.cloud:spring-cloud-starter-config")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     compileOnly("org.projectlombok:lombok")
@@ -46,6 +44,8 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
+    implementation("io.micrometer:micrometer-tracing-bridge-brave")
+    implementation("io.zipkin.reporter2:zipkin-reporter-brave")
 }
 
 dependencyManagement {

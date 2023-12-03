@@ -9,3 +9,9 @@ repositories {
 dependencies {
 
 }
+buildscript {
+    ext {
+        POSTGRESS_JDBC_DRIVER_VERSION = "42.6.0"
+    }
+
+}

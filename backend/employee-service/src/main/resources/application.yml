@@ -3,11 +3,23 @@ spring:
     name: employee-service
   config:
     import: "optional:configserver:http://localhost:8888"
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/kotlin_db
+    username: user
+    password: password
+  r2dbc:
+    url: "r2dbc:postgres://localhost:5432:///kotlin_db?options=DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE"
+    username: user
+    password:
 logging:
   file:
     name: ./build/logs/employeeServiceApplication.log
   level:
-    web: warn
+    web: info
+    root: info
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
 
 management:
   endpoint:

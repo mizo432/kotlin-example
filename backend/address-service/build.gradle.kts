@@ -36,7 +36,6 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
 //    implementation("org.springframework.cloud:spring-cloud-sleuth-zipkin")
 //    implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
-    implementation("de.codecentric:spring-boot-admin-starter-client:3.1.8")
     implementation("org.springframework.cloud:spring-cloud-starter-config")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     compileOnly("org.projectlombok:lombok")

@@ -22,15 +22,19 @@ spring:
           uri: lb://INVENTORY-SERVICE
           predicates:
             - Path=/api/{apiVersion}/inventories/**
+        - id: CUSTOMER-SERVICE
+          uri: lb://CUSTOMER-SERVICE
+          predicates:
+            - Path=/api/{apiVersion}/customers/**
       httpclient:
         pool:
           max-idle-time: 55s
 logging:
   file:
     name: ./build/logs/ApiGatewayApplication.log
-  level:
-    web: WARN
-    root: warn
+#  level:
+#    web: WARN
+#    root: warn
 
 management:
   endpoint:
