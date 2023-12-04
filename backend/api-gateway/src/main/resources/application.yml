@@ -7,7 +7,7 @@ spring:
     gateway:
       routes:
         - id: DEPARTMENT-SERVICE
-          uri: lb://DEPARTMENT-SERVICE
+          uri: lb://department-service
           predicates:
             - Path=/api/{apiVersion}/departments/**
         - id: ADDRESS-SERVICE
@@ -15,7 +15,7 @@ spring:
           predicates:
             - Path=/api/{apiVersion}/prefectures/**,/api/{apiVersion}/municipals/**
         - id: EMPLOYEE-SERVICE
-          uri: lb://EMPLOYEE-SERVICE
+          uri: lb://employee-service
           predicates:
             - Path=/api/{apiVersion}/employees/**
         - id: INVENTORY-SERVICE
@@ -36,13 +36,5 @@ logging:
 #    web: WARN
 #    root: warn
 
-management:
-  endpoint:
-    health:
-      show-details: ALWAYS
-  endpoints:
-    web:
-      exposure:
-        include: "*"
 
 

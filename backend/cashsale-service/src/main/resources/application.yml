@@ -8,5 +8,5 @@ logging:
   file:
     name: ./build/logs/cashSaleServiceApplication.log
   level:
-    web: WARN
+    web: info
 

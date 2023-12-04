@@ -1,1 +1,0 @@
-package com.undecided.inventory.presentation.api.prefecture;

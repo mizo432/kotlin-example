@@ -1,9 +1,10 @@
 package com.undecided.inventory.model.prefecture;
 
+import com.undecided.address.model.prefecture.PrefectureCode;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-
-import org.junit.jupiter.api.Test;
 
 class PrefectureCodeTest {
     /**

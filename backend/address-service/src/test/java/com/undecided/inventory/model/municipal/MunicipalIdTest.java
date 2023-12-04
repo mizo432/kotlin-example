@@ -1,9 +1,10 @@
 package com.undecided.inventory.model.municipal;
 
+import com.undecided.address.model.municipal.MunicipalId;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-
-import org.junit.jupiter.api.Test;
 
 class MunicipalIdTest {
     /**

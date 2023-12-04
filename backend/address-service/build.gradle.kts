@@ -29,6 +29,7 @@ repositories {
 extra["springCloudVersion"] = "2022.0.4"
 
 dependencies {
+    implementation(project(":shared"))
     implementation("org.springframework.boot:spring-boot-starter-actuator:3.1.0")
 //	implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
