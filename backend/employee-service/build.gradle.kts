@@ -34,7 +34,6 @@ extra["springCloudVersion"] = "2022.0.4"
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
-//    implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("org.springframework.cloud:spring-cloud-starter-config")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
@@ -48,7 +47,6 @@ dependencies {
     testImplementation("io.projectreactor:reactor-test")
     implementation("io.zipkin.reporter2:zipkin-reporter-brave:2.16.3")
     implementation("io.micrometer:micrometer-tracing-bridge-brave:1.0.3")
-//    implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
 }
 
 dependencyManagement {

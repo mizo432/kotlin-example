@@ -5,6 +5,7 @@ import com.undecided.employee.model.employee.EmployeeRepository;
 import com.undecided.employee.service.EmployeeQuery;
 import com.undecided.employee.service.EmployeeWithDepartment;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
@@ -13,6 +14,7 @@ import reactor.core.publisher.Mono;
 @RestController
 @RequestMapping("/api/v1/employees")
 @AllArgsConstructor
+@Slf4j
 public class EmployeeResource {
 
     private final EmployeeRepository employeeRepository;
@@ -26,6 +28,7 @@ public class EmployeeResource {
 
     @GetMapping(path = "/with-department")
     Flux<EmployeeWithDepartment> findAllWithDepartment() {
+        log.info("get all employees with department.");
         return employeeQuery.getEmployeesWithDepartment();
 
     }
@@ -41,6 +44,8 @@ public class EmployeeResource {
 
     @GetMapping(path = "/{id}")
     Mono<EmployeeWithDepartment> one(@PathVariable Long id) {
+        log.info("get a employee by Id.");
+
         return employeeQuery.findOneBy(id);
 
     }
