@@ -3,10 +3,16 @@ spring:
     name: inventory-service
   config:
     import: "optional:configserver:http://localhost:8888"
+  r2dbc:
+    url: "r2dbc:postgres://localhost:5432/kotlin_db"
+    username: user
+    password: password
 
 logging:
   file:
     name: ./build/logs/inventoryServiceApplication.log
-  level:
-    web: WARN
+  #  level:
+  #    web: WARN
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
 

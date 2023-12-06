@@ -29,11 +29,14 @@ spring:
 logging:
   file:
     name: ./build/logs/departmentServiceApplication.log
-  level:
-    web: info
-    root: info
-    org.springframework.boot.web.embedded.netty: info
-    undefined:
-      DepartmentServiceApplication: info
+  #  level:
+  #    web: info
+  #    root: info
+  #    org.springframework.boot.web.embedded.netty: info
+  #    undefined:
+  #      DepartmentServiceApplication: info
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+
 
 

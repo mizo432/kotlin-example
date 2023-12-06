@@ -3,8 +3,16 @@ spring:
     name: customer-service
   config:
     import: "optional:configserver:http://localhost:8888"
+  r2dbc:
+    url: "r2dbc:postgres://localhost:5432/kotlin_db"
+    username: user
+    password: password
+
 logging:
   file:
     name: ./build/logs/customerServiceApplication.log
-  level:
-    org.springframework.boot.web.embedded.netty: info
+  #  level:
+  #    org.springframework.boot.web.embedded.netty: info
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+

@@ -3,15 +3,15 @@ spring:
     name: address-service
   config:
     import: "optional:configserver:http://localhost:8888"
-  boot:
-    admin:
-      client:
-        url: "http://localhost:8090/admin"
-#        instance:
-#          service-host-type: ip
+  r2dbc:
+    url: "r2dbc:postgres://localhost:5432/kotlin_db"
+    username: user
+    password: password
+
 logging:
   file:
     name: ./build/logs/addressServiceApplication.log
-  level:
-    web: WARN
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+
 

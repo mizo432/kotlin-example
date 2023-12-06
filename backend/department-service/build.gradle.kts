@@ -12,9 +12,9 @@ group = "undecided"
 version = "0.0.1-SNAPSHOT"
 
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_17
-}
+//java {
+//    sourceCompatibility = JavaVersion.VERSION_17
+//}
 springBoot {
     buildInfo()
 }
@@ -32,20 +32,21 @@ repositories {
 }
 
 dependencies {
+    implementation(project(":shared"))
+    implementation(project(":common"))
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.cloud:spring-cloud-starter-config")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
-    runtimeOnly("org.postgresql:postgresql:42.7.0")
-    implementation("org.flywaydb:flyway-core")
+    runtimeOnly("org.postgresql:postgresql")
     compileOnly("org.projectlombok:lombok")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    implementation("org.slf4j:slf4j-api:2.0.9")
-    implementation("io.zipkin.reporter2:zipkin-reporter-brave:2.16.3")
-    implementation("io.micrometer:micrometer-tracing-bridge-brave:1.0.3")
+    implementation("org.slf4j:slf4j-api")
+    implementation("io.zipkin.reporter2:zipkin-reporter-brave")
+    implementation("io.micrometer:micrometer-tracing-bridge-brave")
 
 }
 

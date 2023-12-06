@@ -1,20 +1,17 @@
 package com.undecided.employee.model.employee;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 @Data
-@AllArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PRIVATE, staticName = "create")
 @NoArgsConstructor
 @ToString
 public class Employee {
-    Long EmployeeId;
-    String name;
-    Long departmentId;
+    private Long EmployeeId;
+    private String name;
+    private Long departmentId;
 
     public static Employee create(long employeeId, String name, long departmentId) {
-        return new Employee(employeeId,name,departmentId);
+        return new Employee(employeeId, name, departmentId);
     }
 }
