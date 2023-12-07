@@ -1,7 +1,7 @@
 plugins {
     java
     idea
-    id("org.springframework.boot") version "3.1.6"
+    id("org.springframework.boot") version "3.2.0"
     id("io.spring.dependency-management") version "1.1.4"
     id("com.github.ben-manes.versions") version "0.50.0"
     id("se.patrikerdes.use-latest-versions") version "0.2.18"
@@ -12,9 +12,9 @@ group = "undecided"
 version = "0.0.1-SNAPSHOT"
 
 
-//java {
-//    sourceCompatibility = JavaVersion.VERSION_17
-//}
+java {
+    sourceCompatibility = JavaVersion.VERSION_20
+}
 springBoot {
     buildInfo()
 }
@@ -25,7 +25,7 @@ configurations {
     }
 }
 
-extra["springCloudVersion"] = "2022.0.4"
+extra["springCloudVersion"] = "2023.0.0"
 
 repositories {
     mavenCentral()
@@ -34,7 +34,6 @@ repositories {
 dependencies {
     implementation(project(":shared"))
     implementation(project(":common"))
-    implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.cloud:spring-cloud-starter-config")
@@ -45,6 +44,7 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     implementation("org.slf4j:slf4j-api")
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("io.zipkin.reporter2:zipkin-reporter-brave")
     implementation("io.micrometer:micrometer-tracing-bridge-brave")
 

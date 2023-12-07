@@ -15,15 +15,15 @@ import static java.util.Objects.nonNull;
 @Slf4j
 public class PrefectureResource {
     @RequestMapping("")
-    public Flux<PrefectureDto> selectAll() {
-        log.info("called get all Prefectures.");
+    public Flux<PrefectureDto> getAll() {
+        log.info("get all Prefectures.");
         return Flux.just(PrefecturesDto.convertFrom(Prefecture.values()));
 
     }
 
     @RequestMapping("/{prefectureCode}")
-    public Mono<PrefectureDto> findByCode(@PathVariable("prefectureCode") String prefectureCode) {
-        log.info("called get a Prefecture by prefectureCode.");
+    public Mono<PrefectureDto> getByCode(@PathVariable("prefectureCode") String prefectureCode) {
+        log.info("get a Prefecture by prefectureCode.");
         Prefecture prefecture = Prefecture.valueOfCode(prefectureCode);
         if (nonNull(prefecture))
             return Mono.empty();

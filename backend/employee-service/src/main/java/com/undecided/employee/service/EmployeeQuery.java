@@ -6,5 +6,5 @@ import reactor.core.publisher.Mono;
 public interface EmployeeQuery {
     Mono<EmployeeWithDepartment> findOneBy(Long id);
 
-    Flux<EmployeeWithDepartment> getEmployeesWithDepartment();
+    Flux<EmployeeWithDepartment> findEmployeesWithDepartment();
 }

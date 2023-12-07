@@ -9,6 +9,7 @@ import com.undecided.employee.model.prefecture.PrefectureDto;
 import com.undecided.employee.service.EmployeeQuery;
 import com.undecided.employee.service.EmployeeWithDepartment;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.reactivestreams.Publisher;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
@@ -16,6 +17,7 @@ import reactor.core.publisher.Mono;
 
 @AllArgsConstructor
 @Service
+@Slf4j
 public class EmployeeQueryImpl implements EmployeeQuery {
     private final EmployeeRepository employeeRepository;
     private final DepartmentClient departmentClient;
@@ -23,6 +25,7 @@ public class EmployeeQueryImpl implements EmployeeQuery {
 
     @Override
     public Mono<EmployeeWithDepartment> findOneBy(Long id) {
+        log.info("find One By id.");
         return employeeRepository.findById(id)
                 .flatMap(employee -> {
                     Long departmentId = employee.getDepartmentId();
@@ -35,7 +38,8 @@ public class EmployeeQueryImpl implements EmployeeQuery {
     }
 
     @Override
-    public Flux<EmployeeWithDepartment> getEmployeesWithDepartment() {
+    public Flux<EmployeeWithDepartment> findEmployeesWithDepartment() {
+        log.info("find employees with department.");
         return employeeRepository.findAll().flatMap(this::apply);
     }
 
@@ -46,4 +50,5 @@ public class EmployeeQueryImpl implements EmployeeQuery {
         return Mono.zip(departmentMono, prefectureMono)
                 .map(tuple -> EmployeeWithDepartment.reconstruct(employee, tuple.getT1(), tuple.getT2()));
     }
+    
 }

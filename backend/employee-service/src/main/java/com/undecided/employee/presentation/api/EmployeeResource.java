@@ -21,29 +21,32 @@ public class EmployeeResource {
     private final EmployeeQuery employeeQuery;
 
     @GetMapping
-    Flux<Employee> findAll() {
+    Flux<Employee> getAll() {
+        log.info("get all employees.");
         return employeeRepository.findAll();
 
     }
 
     @GetMapping(path = "/with-department")
-    Flux<EmployeeWithDepartment> findAllWithDepartment() {
+    Flux<EmployeeWithDepartment> gatAllWithDepartment() {
         log.info("get all employees with department.");
-        return employeeQuery.getEmployeesWithDepartment();
+        return employeeQuery.findEmployeesWithDepartment();
 
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     @ResponseBody
-    Employee newEmployee(@RequestBody Employee newEmployee) {
+    Employee postEmployee(@RequestBody Employee newEmployee) {
+        log.info("post employee.");
         return employeeRepository.save(newEmployee);
+
     }
 
     // Single item
 
     @GetMapping(path = "/{id}")
-    Mono<EmployeeWithDepartment> one(@PathVariable Long id) {
+    Mono<EmployeeWithDepartment> getOneById(@PathVariable Long id) {
         log.info("get a employee by Id.");
 
         return employeeQuery.findOneBy(id);
@@ -53,7 +56,8 @@ public class EmployeeResource {
     @PutMapping(path = "/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @ResponseBody
-    Employee replaceEmployee(@RequestBody Employee newDepartment, @PathVariable Long id) {
+    Employee putEmployee(@RequestBody Employee newDepartment, @PathVariable Long id) {
+        log.info("put a employee");
         return employeeRepository.save(newDepartment);
 
     }
@@ -61,6 +65,7 @@ public class EmployeeResource {
     @DeleteMapping(path = "/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void deleteEmployee(@PathVariable Long id) {
+        log.info("delete a employee by Id.");
         employeeRepository.deleteById(id);
 
     }

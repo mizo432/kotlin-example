@@ -35,8 +35,8 @@ public class DepartmentResource {
     // Single item
 
     @GetMapping(path = "/{id}")
-    Department one(@PathVariable Long id) {
-        log.info("get a departments by Id.");
+    Department getDepartmentById(@PathVariable Long id) {
+        log.info("get department by Id.");
 
         return departmentRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("department", id));
@@ -45,7 +45,8 @@ public class DepartmentResource {
     @PutMapping(path = "/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @ResponseBody
-    Department replaceEmployee(@RequestBody Department newDepartment, @PathVariable Long id) {
+    Department putDepartment(@RequestBody Department newDepartment, @PathVariable Long id) {
+        log.info("put department.");
 
         return departmentRepository.findById(id)
                 .map(employee -> {
@@ -59,6 +60,7 @@ public class DepartmentResource {
     @DeleteMapping(path = "/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void deleteEmployee(@PathVariable Long id) {
+        log.info("get department by Id.");
         departmentRepository.deleteById(id);
     }
 }
