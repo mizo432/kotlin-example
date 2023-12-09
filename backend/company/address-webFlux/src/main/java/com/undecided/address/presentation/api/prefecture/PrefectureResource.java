@@ -28,7 +28,7 @@ public class PrefectureResource {
         log.info("get a Prefecture by prefectureCode.");
         Prefecture prefecture = Prefecture.valueOfCode(prefectureCode);
         if (nonNull(prefecture))
-            return Mono.empty();
-        return Mono.just(new PrefectureDto(prefecture.getCode(), prefecture.getName()));
+            return Mono.just(new PrefectureDto(prefecture.getCode(), prefecture.getName()));
+        return Mono.empty();
     }
 }

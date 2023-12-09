@@ -38,7 +38,6 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-webflux:3.0.4")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:4.0.0")
     implementation("org.springframework.cloud:spring-cloud-starter-config:4.0.1")
-//    developmentOnly("org.springframework.boot:spring-boot-devtools")
 //	runtimeOnly("org.postgresql:postgresql")
     runtimeOnly("org.postgresql:r2dbc-postgresql:1.0.1.RELEASE")
     testImplementation("org.springframework.boot:spring-boot-starter-test:3.1.0")

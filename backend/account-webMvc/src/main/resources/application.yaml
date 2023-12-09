@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: account-service
+  config:
+    import: "optional:configserver:http://localhost:8888"
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/kotlin_db
+    username: user
+    password: password
+logging:
+  file:
+    name: ./build/logs/accountWebMvcApplication.log
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+
+
+
