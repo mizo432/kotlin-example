@@ -1,7 +1,8 @@
 package com.undecided.address.presentation.api.prefecture;
 
 import com.undecided.address.model.prefecture.Prefecture;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,8 +13,9 @@ import static java.util.Objects.nonNull;
 
 @RestController
 @RequestMapping(path = "/api/v1/prefectures")
-@Slf4j
 public class PrefectureResource {
+    private final static Logger log = LoggerFactory.getLogger(PrefectureResource.class);
+
     @RequestMapping("")
     public Flux<PrefectureDto> getAll() {
         log.info("get all Prefectures.");

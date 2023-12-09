@@ -1,10 +1,7 @@
 package com.undecided.address.model.municipal;
 
-import lombok.Getter;
-
 import java.util.Objects;
 
-@Getter
 public class MunicipalId {
 
     /**
@@ -35,6 +32,13 @@ public class MunicipalId {
         this.municipalCode = municipalCode;
     }
 
+    public String getPrefCode() {
+        return prefCode;
+    }
+
+    public String getMunicipalCode() {
+        return municipalCode;
+    }
 
     /**
      * Create the MunicipalId.

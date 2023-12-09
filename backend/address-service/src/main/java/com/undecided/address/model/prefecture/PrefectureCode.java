@@ -1,20 +1,22 @@
 package com.undecided.address.model.prefecture;
 
-import lombok.Getter;
-
 import java.util.Objects;
 
 import static java.util.Objects.isNull;
 
-@Getter
 public class PrefectureCode {
 
     private static final PrefectureCode EMPTY = new PrefectureCode(null);
 
     private final String value;
 
+
     private PrefectureCode(String value) {
         this.value = value;
+    }
+
+    public String getValue() {
+        return value;
     }
 
     public static PrefectureCode of(String value) {

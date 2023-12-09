@@ -4,8 +4,8 @@ import com.undecided.employee.model.employee.Employee;
 import com.undecided.employee.model.employee.EmployeeRepository;
 import com.undecided.employee.service.EmployeeQuery;
 import com.undecided.employee.service.EmployeeWithDepartment;
-import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
@@ -13,12 +13,17 @@ import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping("/api/v1/employees")
-@AllArgsConstructor
-@Slf4j
 public class EmployeeResource {
+
+    private static final Logger log = LoggerFactory.getLogger(EmployeeResource.class);
 
     private final EmployeeRepository employeeRepository;
     private final EmployeeQuery employeeQuery;
+
+    public EmployeeResource(EmployeeRepository employeeRepository, EmployeeQuery employeeQuery) {
+        this.employeeRepository = employeeRepository;
+        this.employeeQuery = employeeQuery;
+    }
 
     @GetMapping
     Flux<Employee> getAll() {

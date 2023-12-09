@@ -1,6 +1,6 @@
 package com.undecided.employee.infra.client.config;
 
-import com.undecided.employee.model.depertment.DepartmentClient;
+import com.undecided.employee.model.department.DepartmentClient;
 import com.undecided.employee.model.prefecture.PrefectureClient;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.client.loadbalancer.reactive.LoadBalancedExchangeFilterFunction;
@@ -44,10 +44,9 @@ public class WebClientConfig {
 
     @Bean
     public PrefectureClient prefectureClient(@Qualifier("addressWebClient") WebClient webClient) {
-        HttpServiceProxyFactory httpServiceProxyFactory;
-        httpServiceProxyFactory = HttpServiceProxyFactory
-                .builder(WebClientAdapter.forClient(webClient))
-                .build();
+        HttpServiceProxyFactory httpServiceProxyFactory = HttpServiceProxyFactory
+                .builderFor(WebClientAdapter.create(webClient)
+                ).build();
         return httpServiceProxyFactory.createClient(PrefectureClient.class);
     }
 
@@ -55,7 +54,7 @@ public class WebClientConfig {
     public DepartmentClient departmentClient(@Qualifier("departmentWebClient") WebClient webClient) {
         HttpServiceProxyFactory httpServiceProxyFactory;
         httpServiceProxyFactory = HttpServiceProxyFactory
-                .builder(WebClientAdapter.forClient(webClient))
+                .builderFor(WebClientAdapter.create(webClient))
                 .build();
         return httpServiceProxyFactory.createClient(DepartmentClient.class);
     }

@@ -4,14 +4,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
 @Table(name = "departments", schema = "department")
 public class Department {
 
@@ -21,4 +15,27 @@ public class Department {
     @Column(name = "name")
     private String name;
 
+    public Department() {
+    }
+
+    public Department(Long departmentId, String name) {
+        this.departmentId = departmentId;
+        this.name = name;
+    }
+
+    public Long getDepartmentId() {
+        return departmentId;
+    }
+
+    public void setDepartmentId(Long departmentId) {
+        this.departmentId = departmentId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

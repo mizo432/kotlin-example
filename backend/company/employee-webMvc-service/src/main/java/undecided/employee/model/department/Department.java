@@ -1,11 +1,5 @@
-package com.undecided.employee.model.depertment;
+package undecided.employee.model.department;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-
-@ToString
 public class Department {
     public Long getDepartmentId() {
         return departmentId;

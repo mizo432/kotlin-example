@@ -13,7 +13,7 @@ group = 'undefined'
 version = '0.0.1-SNAPSHOT'
 
 java {
-    sourceCompatibility = '20'
+    sourceCompatibility = JavaVersion.VERSION_21
 }
 
 springBoot {

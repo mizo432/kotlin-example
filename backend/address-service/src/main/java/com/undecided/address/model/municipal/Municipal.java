@@ -1,11 +1,8 @@
 package com.undecided.address.model.municipal;
 
-import lombok.Getter;
-
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter
 public class Municipal {
     private final Long municipalId;
     private final Long prefectureId;
@@ -29,16 +26,36 @@ public class Municipal {
         return new Municipal(municipalId, prefectureId, code, name);
     }
 
-    @Getter
+    public Long getMunicipalId() {
+        return municipalId;
+    }
+
+    public Long getPrefectureId() {
+        return prefectureId;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public static class Municipals {
-        List<Municipal> value = new ArrayList<>();
+        private final List<Municipal> value = new ArrayList<>();
+
+        public List<Municipal> getValue() {
+            return value;
+        }
 
         Municipals(List<Municipal> value) {
-            this.value = value;
+            this.value.addAll(value);
         }
 
         public static Municipals of(List<Municipal> value) {
             return new Municipals(value);
+            
         }
     }
 }

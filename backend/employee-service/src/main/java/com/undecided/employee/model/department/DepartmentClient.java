@@ -1,4 +1,4 @@
-package com.undecided.employee.model.depertment;
+package com.undecided.employee.model.department;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.service.annotation.GetExchange;
