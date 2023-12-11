@@ -8,6 +8,9 @@ spring:
     url: jdbc:postgresql://localhost:5432/kotlin_db
     username: user
     password: password
+  threads:
+    virtual:
+      enabled: true
 logging:
   file:
     name: ./build/logs/employeeWebMvcApplication.log

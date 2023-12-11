@@ -1,5 +1,6 @@
 package undecided.employee.infra.query.employee;
 
+import io.micrometer.observation.annotation.Observed;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -29,6 +30,7 @@ public class EmployeeQueryImpl implements EmployeeQuery {
     }
 
     @Override
+    @Observed
     public EmployeeWithDepartment findOneBy(Long id) {
         log.info("find One By id.");
         Employee employee = employeeRepository.findById(id);
@@ -40,6 +42,7 @@ public class EmployeeQueryImpl implements EmployeeQuery {
     }
 
     @Override
+    @Observed
     public List<EmployeeWithDepartment> findEmployeesWithDepartment() {
         log.info("find employees with department.");
         return employeeRepository.findAll().stream().map(employee -> {
