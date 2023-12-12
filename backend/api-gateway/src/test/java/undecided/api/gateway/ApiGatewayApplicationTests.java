@@ -1,10 +1,10 @@
-package com.undefined;
+package undecided.api.gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ConfigServerApplicationTests {
+class ApiGatewayApplicationTests {
 
     @Test
     void contextLoads() {

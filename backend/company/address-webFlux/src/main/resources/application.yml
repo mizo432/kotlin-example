@@ -8,7 +8,7 @@ spring:
     username: user
     password: password
   flyway:
-    url: "jdbc:postgresql:localhost:5432/kotlin_db"
+    url: "jdbc:postgresql://localhost:5432/kotlin_db"
     locations: "classpath:db/migration"
     driver-class-name: org.postgresql.Driver
   threads:
