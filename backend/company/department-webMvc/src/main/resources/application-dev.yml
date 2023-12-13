@@ -26,6 +26,8 @@ spring:
   devtools:
     restart:
       exclude: static/**,public/**
+spring.main.web-application-type: servlet
+
 logging:
   file:
     name: ./build/logs/departmentServiceApplication.log

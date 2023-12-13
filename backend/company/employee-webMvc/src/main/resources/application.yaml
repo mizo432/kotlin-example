@@ -11,6 +11,8 @@ spring:
   threads:
     virtual:
       enabled: true
+spring.main.web-application-type: servlet
+
 logging:
   file:
     name: ./build/logs/employeeWebMvcApplication.log

@@ -7,13 +7,23 @@ spring:
     url: "r2dbc:postgres://localhost:5432/kotlin_db"
     username: user
     password: password
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/sample
+    #    url: jdbc:postgresql://localhost:5432/kotlin_db
+    username: user
+    password: password
   flyway:
-    url: "jdbc:postgresql://localhost:5432/kotlin_db"
+    url: "jdbc:postgresql://localhost:5432/sample"
     locations: "classpath:db/migration"
     driver-class-name: org.postgresql.Driver
+    user: user
+    password: password
   threads:
     virtual:
       enabled: true
+spring.main.web-application-type: reactive
+
 logging:
   file:
     name: ./build/logs/addressServiceApplication.log

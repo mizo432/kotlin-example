@@ -14,15 +14,15 @@ import undecided.employee.model.prefecture.PrefectureClient;
 
 @Configuration(proxyBeanMethods = false)
 // @Configuration
-public class WebClientConfig {
+public class RestClientConfig {
 
 
     @Bean("departmentRestClient")
     @LoadBalanced
     public RestClient departmentRestClient() {
+//                .baseUrl("http://department-service")
         return RestClient.builder()
-                .baseUrl("http://department-service")
-//                .baseUrl("http://localhost:8081")
+                .baseUrl("http://localhost:8081")
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                 .build();
     }
@@ -31,8 +31,8 @@ public class WebClientConfig {
     @LoadBalanced
     public RestClient addressRestClient() {
         return RestClient.builder()
-                .baseUrl("http://address-service")
-//                .baseUrl("http://localhost:8085")
+//                .baseUrl("http://address-service")
+                .baseUrl("http://localhost:8085")
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                 .build();
     }

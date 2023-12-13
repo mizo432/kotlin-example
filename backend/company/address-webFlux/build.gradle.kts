@@ -38,11 +38,9 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-webflux:3.0.4")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:4.0.0")
     implementation("org.springframework.cloud:spring-cloud-starter-config:4.0.1")
-    implementation("org.postgresql:postgresql:42.5.4")
     implementation("org.postgresql:r2dbc-postgresql:1.0.1.RELEASE")
     testImplementation("org.springframework.boot:spring-boot-starter-test:3.1.0")
     testImplementation("io.projectreactor:reactor-test:3.5.4")
-    implementation("org.flywaydb:flyway-core:10.2.0")
     implementation("io.zipkin.reporter2:zipkin-reporter-brave:2.16.3")
     implementation("io.micrometer:micrometer-tracing-bridge-brave:1.0.3")
 }
