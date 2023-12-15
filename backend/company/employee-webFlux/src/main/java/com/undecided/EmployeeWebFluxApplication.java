@@ -8,14 +8,14 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class EmployeeServiceApplication {
+public class EmployeeWebFluxApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EmployeeServiceApplication.class, args);
+        SpringApplication.run(EmployeeWebFluxApplication.class, args);
     }
 
     @Bean
-    public RestTemplate restTemplate(){
+    public RestTemplate restTemplate() {
         return new RestTemplate();
     }
 }

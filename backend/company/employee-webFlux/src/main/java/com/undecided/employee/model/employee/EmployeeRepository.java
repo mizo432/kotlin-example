@@ -1,5 +1,6 @@
 package com.undecided.employee.model.employee;
 
+import io.micrometer.observation.annotation.Observed;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -18,6 +19,7 @@ public class EmployeeRepository {
 
     }
 
+    @Observed
     public Flux<Employee> findAll() {
         return Flux.just(map.values().toArray(new Employee[]{}));
     }
@@ -27,6 +29,7 @@ public class EmployeeRepository {
         return employee;
     }
 
+    @Observed
     public Mono<Employee> findById(Long id) {
         return Mono.just(map.get(id));
     }

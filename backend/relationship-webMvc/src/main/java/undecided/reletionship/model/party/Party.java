@@ -6,5 +6,6 @@ package undecided.reletionship.model.party;
  *     パーティーとは人または組織を指します
  * </pre>
  */
-public class Party {
+public interface Party<P extends Party> {
+
 }

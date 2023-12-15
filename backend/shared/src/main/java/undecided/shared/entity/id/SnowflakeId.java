@@ -2,7 +2,7 @@ package undecided.shared.entity.id;
 
 
 import jakarta.annotation.Nonnull;
-import undecided.common.entity.exception.Entity;
+import undecided.common.entity.Entity;
 import undecided.common.entity.generator.NodeIdGenerator;
 import undecided.common.entity.generator.SnowflakeIdGenerator;
 import undecided.common.entity.id.Identifier;

@@ -18,6 +18,8 @@ repositories {
 extra["springCloudVersion"] = "2023.0.0"
 
 dependencies {
+    implementation(project(":common"))
+    implementation(project(":shared"))
     implementation("org.springframework.boot:spring-boot-starter-actuator:3.1.0")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.0.4")
     implementation("org.springframework.boot:spring-boot-starter-web:3.1.0")

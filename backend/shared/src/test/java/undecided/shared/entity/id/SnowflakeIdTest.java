@@ -1,7 +1,7 @@
 package undecided.shared.entity.id;
 
 import org.junit.jupiter.api.Test;
-import undecided.common.entity.exception.Entity;
+import undecided.common.entity.Entity;
 
 import static org.junit.jupiter.api.Assertions.*;
 

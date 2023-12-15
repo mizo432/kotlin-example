@@ -8,6 +8,7 @@ import com.undecided.employee.model.prefecture.PrefectureClient;
 import com.undecided.employee.model.prefecture.PrefectureDto;
 import com.undecided.employee.service.EmployeeQuery;
 import com.undecided.employee.service.EmployeeWithDepartment;
+import io.micrometer.observation.annotation.Observed;
 import org.reactivestreams.Publisher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,6 +30,7 @@ public class EmployeeQueryImpl implements EmployeeQuery {
     }
 
     @Override
+    @Observed
     public Mono<EmployeeWithDepartment> findOneBy(Long id) {
         log.info("find One By id.");
         return employeeRepository.findById(id)
@@ -43,6 +45,7 @@ public class EmployeeQueryImpl implements EmployeeQuery {
     }
 
     @Override
+    @Observed
     public Flux<EmployeeWithDepartment> findEmployeesWithDepartment() {
         log.info("find employees with department.");
         return employeeRepository.findAll().flatMap(this::apply);
