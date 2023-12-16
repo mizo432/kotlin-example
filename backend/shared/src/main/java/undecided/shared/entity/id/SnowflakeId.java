@@ -2,12 +2,14 @@ package undecided.shared.entity.id;
 
 
 import jakarta.annotation.Nonnull;
+import jakarta.persistence.Embeddable;
 import undecided.common.entity.Entity;
 import undecided.common.entity.generator.NodeIdGenerator;
 import undecided.common.entity.generator.SnowflakeIdGenerator;
 import undecided.common.entity.id.Identifier;
 import undecided.common.precondition.ObjectPreconditions;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 import static org.apache.logging.log4j.ThreadContext.isEmpty;
@@ -16,7 +18,8 @@ import static org.apache.logging.log4j.ThreadContext.isEmpty;
 /**
  * スノーフレークID.
  */
-public class SnowflakeId<E extends Entity> implements Identifier<E> {
+@Embeddable
+public class SnowflakeId<E extends Entity> implements Identifier<E>, Serializable {
 
     public static final SnowflakeId<?> EMPTY_VALUE = new SnowflakeId<>();
 
@@ -94,6 +97,7 @@ public class SnowflakeId<E extends Entity> implements Identifier<E> {
 
     @Override
     public int hashCode() {
-        return value != null ? value.hashCode() : 0;
+        return Objects.hash(SnowflakeId.class, value);
+
     }
 }

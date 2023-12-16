@@ -6,26 +6,26 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: DEPARTMENT-SERVICE
+        - id: department-service
           uri: lb://department-service
           predicates:
             - Path=/api/{apiVersion}/departments/**
-        - id: ADDRESS-SERVICE
-          uri: lb://ADDRESS-SERVICE
+        - id: address-service
+          uri: lb://address-service
           predicates:
             - Path=/api/{apiVersion}/prefectures/**,/api/{apiVersion}/municipals/**
-        - id: EMPLOYEE-SERVICE
+        - id: employee-service
           uri: lb://employee-service
           predicates:
             - Path=/api/{apiVersion}/employees/**
-        - id: INVENTORY-SERVICE
-          uri: lb://INVENTORY-SERVICE
+        - id: inventory-service
+          uri: lb://inventory-service
           predicates:
             - Path=/api/{apiVersion}/inventories/**
-        - id: CUSTOMER-SERVICE
-          uri: lb://CUSTOMER-SERVICE
+        - id: relationship-service
+          uri: lb://relationship-service
           predicates:
-            - Path=/api/{apiVersion}/customers/**
+            - Path=/api/{apiVersion}/people/**
       httpclient:
         pool:
           max-idle-time: 55s
@@ -35,6 +35,5 @@ logging:
 #  level:
 #    web: WARN
 #    root: warn
-
 
 
