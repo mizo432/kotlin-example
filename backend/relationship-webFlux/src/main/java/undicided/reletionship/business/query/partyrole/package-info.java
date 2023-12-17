@@ -1,0 +1,1 @@
+package undicided.reletionship.business.query.partyrole;

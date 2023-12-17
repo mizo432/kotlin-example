@@ -21,4 +21,4 @@ management:
 spring:
   sleuth:
     propagation:
-      type: W3C
+      type: B3

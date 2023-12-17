@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: relationship-service
+  config:
+    import: "optional:configserver:http://localhost:8888"
+  r2dbc:
+    url: "r2dbc:postgres://localhost:5432/kotlin_db"
+    username: user
+    password: password
+    pool:
+      max-size: 10
+      initial-size: 2
+  threads:
+    virtual:
+      enabled: true
+spring.main.web-application-type: reactive
+
+logging:
+  file:
+    name: ./build/logs/relationshipServiceApplication.log
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+
+

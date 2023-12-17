@@ -25,10 +25,14 @@ spring:
         - id: relationship-service
           uri: lb://relationship-service
           predicates:
-            - Path=/api/{apiVersion}/people/**
+            - Path=/api/{apiVersion}/people/**,/api/{apiVersion}/customers/**
       httpclient:
         pool:
           max-idle-time: 55s
+  threads:
+    virtual:
+      enabled: true
+
 logging:
   file:
     name: ./build/logs/ApiGatewayApplication.log
