@@ -14,10 +14,6 @@ spring:
           uri: lb://address-service
           predicates:
             - Path=/api/{apiVersion}/prefectures/**,/api/{apiVersion}/municipals/**
-        - id: employee-service
-          uri: lb://employee-service
-          predicates:
-            - Path=/api/{apiVersion}/employees/**
         - id: inventory-service
           uri: lb://inventory-service
           predicates:
@@ -25,7 +21,7 @@ spring:
         - id: relationship-service
           uri: lb://relationship-service
           predicates:
-            - Path=/api/{apiVersion}/people/**,/api/{apiVersion}/customers/**
+            - Path=/api/{apiVersion}/people/**,/api/{apiVersion}/customers/**,/api/{apiVersion}/employees/**
       httpclient:
         pool:
           max-idle-time: 55s

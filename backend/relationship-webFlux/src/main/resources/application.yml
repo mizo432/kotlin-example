@@ -10,11 +10,15 @@ spring:
     pool:
       max-size: 10
       initial-size: 2
+  lifecycle:
+    timeout-per-shutdown-phase: 15s
   threads:
     virtual:
       enabled: true
-spring.main.web-application-type: reactive
-
+  main:
+    web-application-type: reactive
+server:
+  shutdown: graceful
 logging:
   file:
     name: ./build/logs/relationshipServiceApplication.log
