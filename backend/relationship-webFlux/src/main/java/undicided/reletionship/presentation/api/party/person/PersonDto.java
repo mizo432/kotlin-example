@@ -2,13 +2,14 @@ package undicided.reletionship.presentation.api.party.person;
 
 import undicided.reletionship.model.party.person.Person;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public record PersonDto(Long personId, String name) {
+public record PersonDto(Long personId, String name, LocalDate dateOfBirth) {
 
     public static PersonDto convertFrom(Person person) {
-        return new PersonDto(person.personId(), person.name());
+        return new PersonDto(person.personId(), person.name(), person.dateOfBirth());
     }
 
     public static List<PersonDto> convertFrom(List<Person> people) {
@@ -18,12 +19,12 @@ public record PersonDto(Long personId, String name) {
 
 
     public Person convertToEntityAtInsert() {
-        return Person.createAtInsert(name);
+        return Person.createAtInsert(name, dateOfBirth);
 
     }
 
     public Person convertToEntityAtUpdate() {
-        return Person.createAtUpdate(personId, name);
+        return Person.createAtUpdate(personId, name, dateOfBirth);
 
     }
 }
