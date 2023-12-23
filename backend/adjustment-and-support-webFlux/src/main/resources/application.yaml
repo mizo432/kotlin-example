@@ -1,6 +1,6 @@
 spring:
   application:
-    name: relationship-service
+    name: adjustment-and-support-service
   config:
     import: "optional:configserver:http://localhost:8888"
   r2dbc:
@@ -21,7 +21,7 @@ server:
   shutdown: graceful
 logging:
   file:
-    name: ./build/logs/relationshipServiceApplication.log
+    name: ./build/logs/adjustmentAndSupportServiceApplication.log
   pattern:
     level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
 
