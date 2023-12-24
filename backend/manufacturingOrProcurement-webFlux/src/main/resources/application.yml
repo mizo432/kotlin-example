@@ -1,16 +1,16 @@
 spring:
   application:
-    name: inventory-service
+    name: manufacturing-or-procurement-service
   config:
     import: "optional:configserver:http://localhost:8888"
   r2dbc:
-    url: "r2dbc:postgres://localhost:5432/kotlin_db"
+    url: "r2dbc:postgres://localhost:5432/projectName"
     username: user
     password: password
 
 logging:
   file:
-    name: ./build/logs/inventoryServiceApplication.log
+    name: ./build/logs/manufacturingOrProcurementServiceApplication.log
   #  level:
   #    web: WARN
   pattern:

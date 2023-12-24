@@ -1,12 +1,12 @@
 spring:
   application:
-    name: cash-sale-service
+    name: sale-service
   config:
     import: "optional:configserver:http://localhost:8888"
 
 logging:
   file:
-    name: ./build/logs/cashSaleServiceApplication.log
+    name: ./build/logs/SaleServiceApplication.log
   level:
     web: info
 

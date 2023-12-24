@@ -1,7 +1,7 @@
 plugins {
     java
     idea
-    id("org.springframework.boot") version "3.2.0"
+    id("org.springframework.boot") version "3.2.1"
     id("io.spring.dependency-management") version "1.1.4"
     id("com.github.ben-manes.versions") version "0.48.0"
     id("se.patrikerdes.use-latest-versions") version "0.2.18"
@@ -41,7 +41,7 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j")
     implementation("org.springframework.cloud:spring-cloud-starter-config")
-    implementation("org.postgresql:r2dbc-postgresql")
+    runtimeOnly("org.postgresql:r2dbc-postgresql")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
     implementation("io.zipkin.reporter2:zipkin-reporter-brave")
@@ -49,6 +49,9 @@ dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     implementation("io.netty:netty-resolver-dns-native-macos:4.1.80.Final:osx-aarch_64")
     implementation("org.springframework.experimental:r2dbc-micrometer-spring-boot:1.0.2")
+    implementation("org.flywaydb:flyway-core")
+//    implementation("org.springframework:spring-jdbc")
+    runtimeOnly("org.postgresql:postgresql")
 }
 
 dependencyManagement {

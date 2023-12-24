@@ -10,6 +10,11 @@ spring:
     pool:
       max-size: 10
       initial-size: 2
+  flyway:
+    url: jdbc:postgresql://localhost:5432/projectName
+    driver-class-name: org.postgresql.Driver
+    create-schemas: true
+    out-of-order: true
   lifecycle:
     timeout-per-shutdown-phase: 15s
   threads:

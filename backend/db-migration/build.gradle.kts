@@ -12,7 +12,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.flywaydb:flyway-database-postgresql:10.4.0")
+        classpath("org.flywaydb:flyway-database-postgresql:10.4.1")
         /*MySQL5.7に対応してそうなバージョンをググッて適当に設定*/
         classpath("org.postgresql:postgresql:42.5.4")
     }
