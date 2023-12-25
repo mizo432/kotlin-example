@@ -42,6 +42,7 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j")
     implementation("org.springframework.cloud:spring-cloud-starter-config")
     implementation("org.postgresql:r2dbc-postgresql")
+    runtimeOnly("org.postgresql:postgresql")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
     implementation("io.zipkin.reporter2:zipkin-reporter-brave")
@@ -49,6 +50,7 @@ dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     implementation("io.netty:netty-resolver-dns-native-macos:4.1.80.Final:osx-aarch_64")
     implementation("org.springframework.experimental:r2dbc-micrometer-spring-boot:1.0.2")
+    implementation("org.flywaydb:flyway-core")
 }
 
 dependencyManagement {

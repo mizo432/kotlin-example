@@ -1,5 +1,7 @@
 server:
   port: 8083
+  shutdown: graceful
+
 
 eureka:
   client:
@@ -17,3 +19,8 @@ management:
   tracing:
     sampling:
       probability: 1.0
+
+spring:
+  threads:
+    virtual:
+      enabled: true

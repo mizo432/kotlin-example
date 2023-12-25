@@ -33,16 +33,20 @@ extra["springCloudVersion"] = "2023.0.0"
 
 dependencies {
     implementation(project(":shared"))
+    implementation(project(":db-migration"))
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     implementation("org.springframework.cloud:spring-cloud-starter-config")
-    implementation("org.postgresql:r2dbc-postgresql:1.0.1.RELEASE")
+    implementation("org.postgresql:r2dbc-postgresql:")
+    runtimeOnly("org.postgresql:postgresql")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
     implementation("io.zipkin.reporter2:zipkin-reporter-brave")
     implementation("io.micrometer:micrometer-tracing-bridge-brave")
+    implementation("org.flywaydb:flyway-core")
+
 }
 
 dependencyManagement {

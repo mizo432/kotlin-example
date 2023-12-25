@@ -1,5 +1,6 @@
 server:
-  port: 8085
+  port: 8082
+  shutdown: graceful
 
 eureka:
   client:
@@ -22,3 +23,6 @@ spring:
   sleuth:
     propagation:
       type: W3C
+  threads:
+    virtual:
+      enabled: true

@@ -1,4 +1,4 @@
-package undicided.shared.tracefilter;
+package undecided.shared.tracefilter;
 
 import io.micrometer.tracing.Span;
 import io.micrometer.tracing.Tracer;

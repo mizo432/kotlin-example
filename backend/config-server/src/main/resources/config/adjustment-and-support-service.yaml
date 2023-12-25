@@ -1,7 +1,8 @@
 party-webMvc:
   yaml:
 server:
-  port: 8088
+  port: 8084
+  shutdown: graceful
 
 eureka:
   client:
@@ -19,3 +20,8 @@ management:
   tracing:
     sampling:
       probability: 1.0
+
+spring:
+  threads:
+    virtual:
+      enabled: true

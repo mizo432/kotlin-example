@@ -1,12 +1,9 @@
 package undecided.sale.cash.model.prefecture;
 
-import lombok.Getter;
-
 import java.util.Objects;
 
 import static java.util.Objects.isNull;
 
-@Getter
 public class PrefectureCode {
 
     private static final PrefectureCode EMPTY = new PrefectureCode(null);
@@ -37,6 +34,10 @@ public class PrefectureCode {
 
     @Override
     public String toString() {
+        return value;
+    }
+
+    public String getValue() {
         return value;
     }
 }

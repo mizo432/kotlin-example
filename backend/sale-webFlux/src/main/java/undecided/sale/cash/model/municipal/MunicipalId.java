@@ -1,11 +1,15 @@
 package undecided.sale.cash.model.municipal;
 
-import lombok.Getter;
-
 import java.util.Objects;
 
-@Getter
 public class MunicipalId {
+    public String getPrefCode() {
+        return prefCode;
+    }
+
+    public String getMunicipalCode() {
+        return municipalCode;
+    }
 
     /**
      * Prefecture code.

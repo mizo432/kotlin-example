@@ -7,6 +7,11 @@ spring:
     url: "r2dbc:postgres://localhost:5432/projectName"
     username: user
     password: password
+  flyway:
+    url: jdbc:postgresql://localhost:5432/projectName
+    driver-class-name: org.postgresql.Driver
+    create-schemas: true
+    out-of-order: true
 
 logging:
   file:
@@ -15,4 +20,3 @@ logging:
   #    web: WARN
   pattern:
     level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
-

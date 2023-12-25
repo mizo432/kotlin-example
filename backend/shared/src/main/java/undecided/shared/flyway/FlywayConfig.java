@@ -1,4 +1,4 @@
-package undicided.shared.flayway;
+package undecided.shared.flyway;
 
 import org.flywaydb.core.Flyway;
 import org.springframework.beans.factory.annotation.Value;

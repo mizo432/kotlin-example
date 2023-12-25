@@ -1,11 +1,9 @@
 package undecided.sale.cash.model.municipal;
 
-import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter
 public class Municipal {
     private final Long municipalId;
     private final Long prefectureId;
@@ -29,9 +27,12 @@ public class Municipal {
         return new Municipal(municipalId, prefectureId, code, name);
     }
 
-    @Getter
     public static class Municipals {
         List<Municipal> value = new ArrayList<>();
+
+        public List<Municipal> getValue() {
+            return value;
+        }
 
         Municipals(List<Municipal> value) {
             this.value = value;
@@ -40,5 +41,21 @@ public class Municipal {
         public static Municipals of(List<Municipal> value) {
             return new Municipals(value);
         }
+    }
+
+    public Long getMunicipalId() {
+        return municipalId;
+    }
+
+    public Long getPrefectureId() {
+        return prefectureId;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public String getName() {
+        return name;
     }
 }

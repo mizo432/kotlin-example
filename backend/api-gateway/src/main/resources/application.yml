@@ -21,7 +21,11 @@ spring:
         - id: relationship-service
           uri: lb://relationship-service
           predicates:
-            - Path=/api/{apiVersion}/people/**,/api/{apiVersion}/customers/**,/api/{apiVersion}/employees/**
+            - Path=/api/{apiVersion}/people/**,/api/{apiVersion}/customers/**,/api/{apiVersion}/employees/**,/api/{apiVersion}/dummies/**
+        - id: adjustment-and-support-service
+          uri: lb://adjustment-and-support-service
+          predicates:
+            - Path=/api/{apiVersion}/projects/**
       httpclient:
         pool:
           max-idle-time: 55s

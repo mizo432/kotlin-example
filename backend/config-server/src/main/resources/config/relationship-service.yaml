@@ -1,5 +1,6 @@
 server:
-  port: 8092
+  port: 8081
+  shutdown: graceful
 
 eureka:
   client:
@@ -22,3 +23,6 @@ spring:
   sleuth:
     propagation:
       type: B3
+  threads:
+    virtual:
+      enabled: true

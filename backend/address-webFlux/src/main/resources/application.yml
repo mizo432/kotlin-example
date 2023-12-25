@@ -10,7 +10,16 @@ spring:
   threads:
     virtual:
       enabled: true
-spring.main.web-application-type: reactive
+  lifecycle:
+    timeout-per-shutdown-phase: 15s
+  flyway:
+    url: jdbc:postgresql://localhost:5432/projectName
+    driver-class-name: org.postgresql.Driver
+    create-schemas: true
+    out-of-order: true
+
+  main:
+    web-application-type: reactive
 
 logging:
   file:
