@@ -1,1 +1,0 @@
-package undicided.reletionship.model.partyrole.customer;

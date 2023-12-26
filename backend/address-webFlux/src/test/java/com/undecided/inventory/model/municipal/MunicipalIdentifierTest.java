@@ -1,6 +1,6 @@
 package com.undecided.inventory.model.municipal;
 
-import com.undecided.address.model.municipal.MunicipalId;
+import undecided.adress.model.municipal.MunicipalId;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

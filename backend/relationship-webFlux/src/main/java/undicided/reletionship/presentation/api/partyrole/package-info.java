@@ -1,1 +1,0 @@
-package undicided.reletionship.presentation.api.partyrole;

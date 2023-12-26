@@ -8,7 +8,7 @@ spring:
     username: user
     password: password
     pool:
-      max-size: 10
+      max-size: 5
       initial-size: 2
   lifecycle:
     timeout-per-shutdown-phase: 15s

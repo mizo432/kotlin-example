@@ -1,6 +1,6 @@
 package com.undecided.inventory.model.prefecture;
 
-import com.undecided.address.model.prefecture.PrefectureCode;
+import undecided.adress.model.prefecture.PrefectureCode;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
