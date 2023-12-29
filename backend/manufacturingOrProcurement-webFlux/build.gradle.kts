@@ -44,6 +44,7 @@ dependencies {
     testImplementation("io.projectreactor:reactor-test")
     implementation("io.zipkin.reporter2:zipkin-reporter-brave")
     implementation("io.micrometer:micrometer-tracing-bridge-brave")
+    implementation("org.springframework.experimental:r2dbc-micrometer-spring-boot:1.0.2")
     implementation("org.flywaydb:flyway-core")
 
 }

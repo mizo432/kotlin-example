@@ -47,6 +47,7 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
     implementation("io.zipkin.reporter2:zipkin-reporter-brave")
+    implementation("org.springframework.experimental:r2dbc-micrometer-spring-boot:1.0.2")
     implementation("org.flywaydb:flyway-core")
 
 }

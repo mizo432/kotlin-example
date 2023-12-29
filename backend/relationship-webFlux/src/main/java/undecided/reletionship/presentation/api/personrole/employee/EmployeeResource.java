@@ -9,7 +9,7 @@ import undecided.reletionship.business.query.personrole.employee.EmployeeDto;
 import undecided.reletionship.business.query.personrole.employee.EmployeeQuery;
 
 @RestController
-@RequestMapping("/api/v1/employees")
+@RequestMapping("/api/v1/person-role/employees")
 public class EmployeeResource {
     private final EmployeeQuery employeeQuery;
     private final EmployeeCommand employeeCommand;

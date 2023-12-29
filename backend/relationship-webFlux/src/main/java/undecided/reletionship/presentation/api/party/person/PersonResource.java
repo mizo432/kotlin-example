@@ -6,12 +6,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import undecided.shared.entity.id.SnowflakeId;
 import undecided.reletionship.business.command.PersonCommand;
 import undecided.reletionship.business.query.person.PersonQuery;
+import undecided.shared.entity.id.SnowflakeId;
 
 @RestController
-@RequestMapping("/api/v1/people")
+@RequestMapping("/api/v1/party/people")
 public class PersonResource {
     private static final Logger log = LoggerFactory.getLogger(PersonResource.class);
     private final PersonQuery personQuery;

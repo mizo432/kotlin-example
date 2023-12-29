@@ -18,17 +18,22 @@ public class WebClientConfig {
     }
 
     @Bean
-    public WebClient projectWebClient() {
-        return WebClient.builder()
+    public WebClient.Builder projectWebClientBuilder() {
+        return WebClient.builder();
+    }
+
+    @Bean
+    public WebClient projectWebClient(WebClient.Builder projectWebClientBuilder) {
+        return projectWebClientBuilder
                 .baseUrl("http://relationship-service")
                 .filter(loadBalancedExchangeFilterFunction)
                 .build();
     }
 
     @Bean
-    public DummyClient dummyClient() {
+    public DummyClient dummyClient(WebClient projectWebClient) {
         HttpServiceProxyFactory httpServiceProxyFactory = HttpServiceProxyFactory
-                .builder().exchangeAdapter(WebClientAdapter.create(projectWebClient()))
+                .builder().exchangeAdapter(WebClientAdapter.create(projectWebClient))
                 .build();
         return httpServiceProxyFactory.createClient(DummyClient.class);
     }

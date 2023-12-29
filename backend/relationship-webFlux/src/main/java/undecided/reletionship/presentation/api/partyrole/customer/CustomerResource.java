@@ -6,7 +6,7 @@ import undecided.reletionship.business.command.partyrole.customer.CustomerComman
 import undecided.reletionship.business.query.partyrole.customer.CustomerQuery;
 
 @RestController
-@RequestMapping("/customers")
+@RequestMapping("/api/v1/party-role//customers")
 public class CustomerResource {
     private final CustomerCommand customerCommand;
     private final CustomerQuery customerQuery;

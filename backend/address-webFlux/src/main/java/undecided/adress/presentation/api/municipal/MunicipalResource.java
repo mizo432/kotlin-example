@@ -1,15 +1,15 @@
 package undecided.adress.presentation.api.municipal;
 
-import undecided.adress.buisiness.query.municipal.MunicipalDto;
-import undecided.adress.buisiness.query.municipal.MunicipalQuery;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import undecided.adress.buisiness.query.municipal.MunicipalDto;
+import undecided.adress.buisiness.query.municipal.MunicipalQuery;
 
 import static java.util.Objects.isNull;
 
 @RestController
-@RequestMapping(path = "/api/v1/municipals")
+@RequestMapping(path = "/api/v1/address/municipals")
 public class MunicipalResource {
     private final MunicipalQuery municipalQuery;
 
