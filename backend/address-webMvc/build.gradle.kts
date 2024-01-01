@@ -34,6 +34,7 @@ extra["springCloudVersion"] = "2023.0.0"
 dependencies {
     implementation(project(":shared-webMvc"))
     implementation(project(":db-migration"))
+    implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")

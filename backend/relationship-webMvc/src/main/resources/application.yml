@@ -8,6 +8,16 @@ spring:
     password: password
     url: jdbc:postgresql://localhost:5432/projectName
     driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-test-query: SELECT 1
+      connection-timeout: 60000                  # Default: 30000 (30 seconds)
+      minimum-idle: 2                           # Default: same as maximumPoolSize
+      maximum-pool-size: 10
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
   flyway:
     url: jdbc:postgresql://localhost:5432/projectName
     driver-class-name: org.postgresql.Driver
@@ -20,8 +30,7 @@ spring:
       enabled: true
   main:
     web-application-type: SERVLET
-server:
-  shutdown: graceful
+
 logging:
   file:
     name: ./build/logs/relationshipServiceApplication.log

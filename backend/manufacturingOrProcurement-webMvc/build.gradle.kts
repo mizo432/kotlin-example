@@ -1,7 +1,7 @@
 plugins {
     java
     idea
-    id("org.springframework.boot") version "3.2.1"
+    id("org.springframework.boot") version "3.1.6"
     id("io.spring.dependency-management") version "1.1.4"
     id("com.github.ben-manes.versions") version "0.48.0"
     id("se.patrikerdes.use-latest-versions") version "0.2.18"
@@ -12,11 +12,13 @@ plugins {
 group = "undecided"
 version = "0.0.1-SNAPSHOT"
 
-springBoot {
-    buildInfo()
-}
 java {
     sourceCompatibility = JavaVersion.VERSION_21
+}
+
+
+springBoot {
+    buildInfo()
 }
 
 configurations {
@@ -29,16 +31,15 @@ repositories {
     mavenCentral()
 }
 
-extra["springCloudVersion"] = "2023.0.0"
+extra["springCloudVersion"] = "2022.0.4"
 
 dependencies {
-    implementation(project(":common"))
     implementation(project(":shared-webMvc"))
+    implementation(project(":common"))
     implementation(project(":db-migration"))
     implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j")
@@ -52,6 +53,7 @@ dependencies {
     runtimeOnly("org.postgresql:postgresql")
     annotationProcessor("org.projectlombok:lombok")
     compileOnly("org.projectlombok:lombok")
+
 }
 
 dependencyManagement {
