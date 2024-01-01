@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: relationship-service
+  config:
+    import: "optional:configserver:http://localhost:8888"
+  datasource:
+    username: user
+    password: password
+    url: jdbc:postgresql://localhost:5432/projectName
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    url: jdbc:postgresql://localhost:5432/projectName
+    driver-class-name: org.postgresql.Driver
+    create-schemas: true
+    out-of-order: true
+  lifecycle:
+    timeout-per-shutdown-phase: 15s
+  threads:
+    virtual:
+      enabled: true
+  main:
+    web-application-type: SERVLET
+server:
+  shutdown: graceful
+logging:
+  file:
+    name: ./build/logs/relationshipServiceApplication.log
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+
+

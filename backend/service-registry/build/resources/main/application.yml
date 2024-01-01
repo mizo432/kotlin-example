@@ -1,0 +1,29 @@
+server:
+  port: ${PORT:8761}
+
+spring:
+  application:
+    name: service-registry
+  threads:
+    virtual:
+      enabled: true
+#  cloud:
+#    loadbalancer:
+#      enabled: false
+
+
+eureka:
+  instance:
+    hostname: ${CONTAINER_NAME:localhost}
+    preferIpAddress: false
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+logging:
+  level:
+    com.netflix.eureka: OFF
+    com.netflix.discovery: OFF
+
