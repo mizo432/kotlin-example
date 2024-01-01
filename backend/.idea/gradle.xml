@@ -9,7 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/address-webMvc" />
-            <option value="$PROJECT_DIR$/adjustment-and-support-webFlux" />
+            <option value="$PROJECT_DIR$/adjustment-and-support-webMvc" />
             <option value="$PROJECT_DIR$/api-gateway" />
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/config-server" />

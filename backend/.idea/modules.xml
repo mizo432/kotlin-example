@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/backend.iml" filepath="$PROJECT_DIR$/.idea/modules/backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/address-webMvc/backend.address-webMvc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/address-webMvc/backend.address-webMvc.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/adjustment-and-support-webMvc/backend.adjustment-and-support-webMvc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/adjustment-and-support-webMvc/backend.adjustment-and-support-webMvc.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/relationship-webMvc/backend.relationship-webMvc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/relationship-webMvc/backend.relationship-webMvc.main.iml" />
     </modules>
   </component>

@@ -9,6 +9,6 @@ include 'shared-webMvc'
 include 'address-webMvc'
 include 'sale-webFlux'
 include 'relationship-webMvc'
-include 'adjustment-and-support-webFlux'
+include 'adjustment-and-support-webMvc'
 include 'db-migration'
 
