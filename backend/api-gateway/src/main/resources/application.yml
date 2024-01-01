@@ -10,18 +10,22 @@ spring:
           uri: lb://address-service
           predicates:
             - Path=/api/{apiVersion}/address/**
+
         - id: relationship-service
           uri: lb://relationship-service
           predicates:
             - Path=/api/{apiVersion}/party/**,/api/{apiVersion}/party-role/**,/api/{apiVersion}/person-role/**,/api/{apiVersion}/organization-role/**
+
         - id: adjustment-and-support-service
           uri: lb://adjustment-and-support-service
           predicates:
-            - Path=/api/{apiVersion}/projects/**
+            - Path=/api/{apiVersion}/account/**
+
         - id: sale-service
           uri: lb://sake-service
           predicates:
             - Path=/api/{apiVersion}/cash-sales/**
+
         - id: manufacturing-or-procurement-service
           uri: lb://manufacturing-or-procurement-service
           predicates:

@@ -1,12 +1,13 @@
 package undecided.adress.model.municipal;
 
-import undecided.adress.model.municipal.Municipal.Municipals;
+import org.springframework.data.r2dbc.repository.R2dbcRepository;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
-public interface MunicipalRepository {
-    Municipals selectAll();
+public interface MunicipalRepository extends R2dbcRepository<Municipal, Long> {
 
-    Municipals selectByPre(String prefectureCode);
+    Flux<Municipal> findByPrefectureCode(String prefectureCode);
 
-    Municipal findOneByMunicipalCode(String municipalCode);
+    Mono<Municipal> findByMunicipalCode(String municipalCode);
 
 }

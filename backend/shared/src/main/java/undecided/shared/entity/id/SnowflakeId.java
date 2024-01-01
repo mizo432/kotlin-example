@@ -3,10 +3,8 @@ package undecided.shared.entity.id;
 
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.Embeddable;
-import undecided.common.entity.Entity;
 import undecided.common.entity.generator.NodeIdGenerator;
 import undecided.common.entity.generator.SnowflakeIdGenerator;
-import undecided.common.entity.id.Identifier;
 import undecided.common.precondition.ObjectPreconditions;
 
 import java.io.Serializable;
@@ -19,9 +17,9 @@ import static org.apache.logging.log4j.ThreadContext.isEmpty;
  * スノーフレークID.
  */
 @Embeddable
-public class SnowflakeId<E extends Entity> implements Identifier<E>, Serializable {
+public class SnowflakeId implements Serializable {
 
-    public static final SnowflakeId<?> EMPTY_VALUE = new SnowflakeId<>();
+    public static final SnowflakeId EMPTY_VALUE = new SnowflakeId();
 
     private final Long value;
 
@@ -55,8 +53,8 @@ public class SnowflakeId<E extends Entity> implements Identifier<E>, Serializabl
         return String.valueOf(getValue());
     }
 
-    public static <E extends Entity> SnowflakeId<E> newInstance() {
-        return new SnowflakeId<>(
+    public static SnowflakeId newInstance() {
+        return new SnowflakeId(
                 new SnowflakeIdGenerator(NodeIdGenerator.generateNodeId()).generateID());
 
     }
@@ -67,14 +65,14 @@ public class SnowflakeId<E extends Entity> implements Identifier<E>, Serializabl
      * @param value データベースから取得した値
      * @return 識別子オブジェクト
      */
-    public static <E extends Entity> SnowflakeId<E> reconstruct(final Long value) {
-        return new SnowflakeId<>(value);
+    public static SnowflakeId reconstruct(final Long value) {
+        return new SnowflakeId(value);
 
     }
 
-    public static <E extends Entity> SnowflakeId<E> of(@Nonnull final Long value) {
+    public static SnowflakeId of(@Nonnull final Long value) {
         ObjectPreconditions.checkNotNull(value, () -> new IllegalArgumentException("引数 valueにnullを設定できません。"));
-        return new SnowflakeId<E>(value);
+        return new SnowflakeId(value);
 
     }
 
@@ -90,7 +88,7 @@ public class SnowflakeId<E extends Entity> implements Identifier<E>, Serializabl
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        SnowflakeId<?> that = (SnowflakeId<?>) o;
+        SnowflakeId that = (SnowflakeId) o;
 
         return Objects.equals(value, that.value);
     }

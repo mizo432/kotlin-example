@@ -1,44 +1,36 @@
 package undecided.adress.infra.query.municipal;
 
-import undecided.adress.buisiness.query.municipal.MunicipalDto;
-import undecided.adress.buisiness.query.municipal.MunicipalDto.MunicipalsDto;
-import undecided.adress.buisiness.query.municipal.MunicipalQuery;
-import undecided.adress.model.municipal.Municipal;
-import undecided.adress.model.municipal.Municipal.Municipals;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
+import undecided.adress.buisiness.query.municipal.MunicipalQuery;
+import undecided.adress.model.municipal.Municipal;
+import undecided.adress.model.municipal.MunicipalRepository;
 
 @Service
 public class MunicipalQueryImpl implements MunicipalQuery {
 
-    private static final List<Municipal> source = new ArrayList<>();
+    private final MunicipalRepository municipalRepository;
 
-    public MunicipalQueryImpl() {
-        source.add(Municipal.create(1L, 1L, "001", "札幌市"));
-        source.add(Municipal.create(2L, 1L, "002", "帯広市"));
-        source.add(Municipal.create(3L, 13L, "001", "千葉市"));
+    public MunicipalQueryImpl(MunicipalRepository municipalRepository) {
+        this.municipalRepository = municipalRepository;
     }
 
     @Override
-    public Flux<MunicipalDto> selectByPrefectureCode(String prefectureCode) {
-        List<Municipal> result = source.stream().filter(municipal -> municipal.getPrefectureId().equals(Long.valueOf(prefectureCode))).collect(Collectors.toList());
-        return Flux.just(MunicipalsDto.convertFrom(Municipals.of(result)).toArray(new MunicipalDto[]{}));
+    public Flux<Municipal> selectByPrefectureCode(String prefectureCode) {
+        return municipalRepository.findByPrefectureCode(prefectureCode);
+
     }
 
     @Override
-    public Flux<MunicipalDto> selectAll() {
-        return Flux.just(MunicipalsDto.convertFrom(Municipals.of(source)).toArray(new MunicipalDto[]{}));
+    public Flux<Municipal> selectAll() {
+        return municipalRepository.findAll();
+
     }
 
     @Override
-    public Mono<MunicipalDto> findOneByMunicipalCode(String cityCode) {
-        Municipal result = source.stream().filter(
-                municipal -> municipal.getMunicipalId().equals(Long.valueOf(cityCode))).findFirst().orElseThrow();
-        return Mono.just(MunicipalDto.convertFrom(result));
+    public Mono<Municipal> findOneByMunicipalCode(String municipalCode) {
+        return municipalRepository.findByMunicipalCode(municipalCode);
+
     }
 }

@@ -2,12 +2,13 @@ package undecided.adress.buisiness.query.municipal;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import undecided.adress.model.municipal.Municipal;
 
 public interface MunicipalQuery {
-    Flux<MunicipalDto> selectByPrefectureCode(String prefectureCode);
+    Flux<Municipal> selectByPrefectureCode(String prefectureCode);
 
-    Flux<MunicipalDto> selectAll();
+    Flux<Municipal> selectAll();
 
-    Mono<MunicipalDto> findOneByMunicipalCode(String cityCode);
+    Mono<Municipal> findOneByMunicipalCode(String cityCode);
 
 }

@@ -1,10 +1,10 @@
-package undecided.ppt;
+package undecided;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PptServiceApplicationTests {
+class ManufacturingOrProcurementWebFluxApplicationTests {
 
 	@Test
 	void contextLoads() {

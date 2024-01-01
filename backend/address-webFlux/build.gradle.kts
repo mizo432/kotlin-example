@@ -48,6 +48,9 @@ dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     implementation("org.springframework.experimental:r2dbc-micrometer-spring-boot:1.0.2")
     implementation("org.flywaydb:flyway-core")
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-csv")
+    implementation("io.netty:netty-resolver-dns-native-macos:4.1.80.Final:osx-aarch_64")
+
 
 }
 

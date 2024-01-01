@@ -11,7 +11,7 @@ public class SnowflakeIdConverter implements AttributeConverter<SnowflakeId, Lon
     }
 
     @Override
-    public SnowflakeId<?> convertToEntityAttribute(Long dbData) {
+    public SnowflakeId convertToEntityAttribute(Long dbData) {
         return SnowflakeId.reconstruct(dbData);
     }
 }
