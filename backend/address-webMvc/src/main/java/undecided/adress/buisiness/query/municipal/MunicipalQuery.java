@@ -11,4 +11,6 @@ public interface MunicipalQuery {
 
     Municipal findOneByMunicipalCode(String cityCode);
 
+    List<Municipal> findByPrefectureCode(String prefectureCode);
+    
 }

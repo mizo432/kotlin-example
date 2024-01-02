@@ -6,6 +6,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import undecided.adress.model.municipal.MunicipalsCsvReader;
 
+import java.io.IOException;
+
 @Service
 public class ImportMunicipalsFromCsv {
 
@@ -20,15 +22,13 @@ public class ImportMunicipalsFromCsv {
 
     @Observed(name = "ImportMunicipalsFromCsv", contextualName = "importRecs")
     public void importRecs() {
-        //try {
-        log.info("call ImportMunicipalsFromCsv#importRecs()");
-        // municipalsCsvReader.readAll().toStream().forEach(
-        //         municipalCsv -> {
-        //             Municipal municipal = municipalCsv.toEntity();
-        //             importMunicipal.save(municipal);
-        //         });
-        //} catch (IOException e) {
-        //    throw new RuntimeException(e);
-        //}
+        try {
+            log.info("call ImportMunicipalsFromCsv#importRecs()");
+            municipalsCsvReader.readAll().forEach(
+                    importMunicipal::save);
+        } catch (
+                IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

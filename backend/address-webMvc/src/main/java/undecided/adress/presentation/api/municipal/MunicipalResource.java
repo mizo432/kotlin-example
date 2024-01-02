@@ -1,9 +1,11 @@
 package undecided.adress.presentation.api.municipal;
 
+import com.google.common.base.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 import undecided.adress.buisiness.command.municipal.ImportMunicipalsFromCsv;
+import undecided.adress.buisiness.query.municipal.MunicipalDto;
 import undecided.adress.buisiness.query.municipal.MunicipalQuery;
 
 import java.util.List;
@@ -20,15 +22,20 @@ public class MunicipalResource {
         this.importMunicipalsFromCsv = importMunicipalsFromCsv;
     }
 
-    @GetMapping(path = "", produces = {"application/json"})
-    public List<MunicipalDto> get() {
-        return MunicipalDto.reconstruct(municipalQuery.selectAll());
-    }
 
-    @GetMapping(path = "/{municipalCode}", produces = {"application/json"})
+    @GetMapping("/{municipalCode}")
     public MunicipalDto getByCode(@PathVariable("municipalCode") String municipalCode) {
 
+
         return MunicipalDto.reconstruct(municipalQuery.findOneByMunicipalCode(municipalCode));
+    }
+
+    @GetMapping
+    public List<MunicipalDto> findByPrefectureCode(@RequestParam(value = "prefectureCode", required = false) String prefectureCode) {
+        if (Strings.isNullOrEmpty(prefectureCode))
+            return MunicipalDto.reconstruct(municipalQuery.selectAll());
+
+        return MunicipalDto.reconstruct(municipalQuery.findByPrefectureCode(prefectureCode));
     }
 
     @PostMapping(path = "/import")

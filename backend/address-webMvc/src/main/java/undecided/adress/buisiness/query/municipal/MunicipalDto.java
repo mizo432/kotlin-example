@@ -1,7 +1,6 @@
-package undecided.adress.presentation.api.municipal;
+package undecided.adress.buisiness.query.municipal;
 
 import undecided.adress.model.municipal.Municipal;
-import undecided.adress.model.municipal.Municipal.Municipals;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -39,8 +38,8 @@ public record MunicipalDto(        /* 市区町村ID */
     public static MunicipalDto reconstruct(Municipal municipal) {
         return new MunicipalDto(
                 municipal.getMunicipalId(),
-                municipal.getMunicipalCode(),
                 municipal.getPrefectureCode(),
+                municipal.getMunicipalCode(),
                 municipal.getGunName(),
                 municipal.getGunKanaName(),
                 municipal.getCityName(),
@@ -59,19 +58,6 @@ public record MunicipalDto(        /* 市区町村ID */
 
         }
         return result;
-    }
-
-    public static class MunicipalsDto {
-
-        public static List<MunicipalDto> convertFrom(Municipals municipals) {
-            List<MunicipalDto> result = new ArrayList<>();
-            for (Municipal municipal : municipals.getValue()) {
-                result.add(MunicipalDto.reconstruct(municipal));
-
-            }
-            return result;
-
-        }
     }
 
 }

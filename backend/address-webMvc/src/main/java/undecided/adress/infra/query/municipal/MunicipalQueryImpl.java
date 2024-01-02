@@ -37,4 +37,11 @@ public class MunicipalQueryImpl implements MunicipalQuery {
         return municipalRepository.findByMunicipalCode(municipalCode);
 
     }
+
+    @Override
+    @Observed
+    public List<Municipal> findByPrefectureCode(String prefectureCode) {
+        return municipalRepository.findByPrefectureCode(prefectureCode);
+
+    }
 }
