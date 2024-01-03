@@ -11,4 +11,5 @@ include 'sale-webMvc'
 include 'relationship-webMvc'
 include 'adjustment-and-support-webMvc'
 include 'db-migration'
+include 'admin-server'
 

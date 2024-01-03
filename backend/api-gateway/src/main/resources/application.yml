@@ -6,6 +6,11 @@ spring:
   cloud:
     gateway:
       routes:
+        - id: admin-server
+          uri: lb://admin-server
+          predicates:
+            - Path=/admin-server/**
+
         - id: address-service
           uri: lb://address-service
           predicates:

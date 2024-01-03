@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: admin-server
+  config:
+    import: "optional:configserver:http://localhost:8888"
+  lifecycle:
+    timeout-per-shutdown-phase: 15s
+  main:
+    web-application-type: SERVLET
+  boot:
+    admin:
+      context-path: /admin-server
+logging:
+  file:
+    name: ./build/logs/adminServerApplication.log
+
+
