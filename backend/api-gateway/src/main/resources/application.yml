@@ -7,9 +7,9 @@ spring:
     gateway:
       routes:
         - id: admin-server
-          uri: lb://admin-server
+          uri: lb://admin-server/admin
           predicates:
-            - Path=/admin-server/**
+            - Path=/admin/**
 
         - id: address-service
           uri: lb://address-service
