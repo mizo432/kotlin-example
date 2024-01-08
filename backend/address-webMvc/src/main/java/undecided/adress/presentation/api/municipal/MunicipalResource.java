@@ -33,7 +33,7 @@ public class MunicipalResource {
     @GetMapping
     public List<MunicipalDto> findByPrefectureCode(@RequestParam(value = "prefectureCode", required = false) String prefectureCode) {
         if (Strings.isNullOrEmpty(prefectureCode))
-            return MunicipalDto.reconstruct(municipalQuery.selectAll());
+            return MunicipalDto.reconstruct(municipalQuery.findAll());
 
         return MunicipalDto.reconstruct(municipalQuery.findByPrefectureCode(prefectureCode));
     }

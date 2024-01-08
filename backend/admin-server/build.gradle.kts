@@ -15,7 +15,7 @@ repositories {
     mavenCentral()
 }
 
-extra["springBootAdminVersion"] = "3.2.0"
+extra["springBootAdminVersion"] = "3.2.1"
 extra["springCloudVersion"] = "2023.0.0"
 
 dependencies {

@@ -5,5 +5,5 @@ import java.util.List;
 public interface EmployeeQuery {
     List<EmployeeDto> findAll();
 
-    EmployeeDto findOneByEmployeeNo(String employeeNo);
+    EmployeeDto findByEmployeeNo(String employeeNo);
 }

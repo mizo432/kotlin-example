@@ -36,7 +36,7 @@ public class EmployeeQueryImpl implements EmployeeQuery {
 
     @Override
     @Observed
-    public EmployeeDto findOneByEmployeeNo(String employeeNo) {
+    public EmployeeDto findByEmployeeNo(String employeeNo) {
         Employee employee = employeeRepository.findByEmployeeNo(employeeNo);
         Optional<Person> personOptional = personRepository.findById(employee.getEmployeeId());
         return EmployeeDto.reconstruct(employee, personOptional.orElseThrow());

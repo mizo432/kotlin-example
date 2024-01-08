@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="JpaBuddyIdeaProjectConfig">
+  <component name="JpaBuddyIdeaProjectConfig" ddlActionDbType="postgres" newRepositoryParent="org.springframework.data.jpa.repository.JpaRepository">
     <option name="defaultUnitInitialized" value="true" />
     <option name="renamerInitialized" value="true" />
     <option name="reverseEngineeringLastDbConnectionId" value="7d5f4461-8e4c-4754-8345-c14e09d9909a__projectName_relationship" />
-    <option name="reLastEntityCreationPackage" value="manufacturingOrProcurement-webFlux/src/main/java/undecided/reletionship/model/party/person" />
+    <option name="reLastEntityCreationPackage" value="relationship-webMvc/src/main/java/undecided/reletionship/model/party/addressUse" />
+    <option name="newEntityIdStrategy" />
   </component>
 </project>

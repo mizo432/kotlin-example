@@ -4,19 +4,21 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import org.hibernate.proxy.HibernateProxy;
 import undecided.reletionship.model.parsonrole.PersonRole;
 import undecided.reletionship.model.party.person.Person;
 import undecided.shared.entity.id.SnowflakeId;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 @Entity
 @Table(schema = "relationship", name = "employees")
-@Data
-@NoArgsConstructor
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
 @AllArgsConstructor
 public class Employee implements PersonRole<Employee> {
     @Id
@@ -50,5 +52,21 @@ public class Employee implements PersonRole<Employee> {
 
     public static Employee createAtInsert(String employeeNo) {
         return new Employee(SnowflakeId.newInstance().getValue(), employeeNo);
+    }
+
+    @Override
+    public final boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null) return false;
+        Class<?> oEffectiveClass = o instanceof HibernateProxy ? ((HibernateProxy) o).getHibernateLazyInitializer().getPersistentClass() : o.getClass();
+        Class<?> thisEffectiveClass = this instanceof HibernateProxy ? ((HibernateProxy) this).getHibernateLazyInitializer().getPersistentClass() : this.getClass();
+        if (thisEffectiveClass != oEffectiveClass) return false;
+        Employee employee = (Employee) o;
+        return getEmployeeId() != null && Objects.equals(getEmployeeId(), employee.getEmployeeId());
+    }
+
+    @Override
+    public final int hashCode() {
+        return this instanceof HibernateProxy ? ((HibernateProxy) this).getHibernateLazyInitializer().getPersistentClass().hashCode() : getClass().hashCode();
     }
 }

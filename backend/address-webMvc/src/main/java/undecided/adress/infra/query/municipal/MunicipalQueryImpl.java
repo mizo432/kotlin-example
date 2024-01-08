@@ -19,14 +19,7 @@ public class MunicipalQueryImpl implements MunicipalQuery {
 
     @Override
     @Observed
-    public List<Municipal> selectByPrefectureCode(String prefectureCode) {
-        return municipalRepository.findByPrefectureCode(prefectureCode);
-
-    }
-
-    @Override
-    @Observed
-    public List<Municipal> selectAll() {
+    public List<Municipal> findAll() {
         return municipalRepository.findAll();
 
     }

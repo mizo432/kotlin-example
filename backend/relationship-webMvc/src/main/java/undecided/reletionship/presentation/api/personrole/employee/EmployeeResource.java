@@ -32,7 +32,7 @@ public class EmployeeResource {
     @GetMapping("/{employeeNo}")
     @Observed
     public EmployeeDto get(@PathVariable("employeeNo") String employeeNo) {
-        return employeeQuery.findOneByEmployeeNo(employeeNo);
+        return employeeQuery.findByEmployeeNo(employeeNo);
 
     }
 
