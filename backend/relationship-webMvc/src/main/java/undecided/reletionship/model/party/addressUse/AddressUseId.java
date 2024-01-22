@@ -49,4 +49,5 @@ public class AddressUseId implements Serializable {
         return Objects.hash(addressUseType, partyAddressId, partyId, effectiveDate);
     }
 
+
 }

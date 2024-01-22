@@ -4,7 +4,9 @@ import lombok.Getter;
 
 @Getter
 public enum AddressUseType {
-    UNKNOWN(0, "未設定");
+    UNKNOWN(0, "未設定"),
+    ADDRESS(1, "住所"),
+    ADDRESS2(2, "所在地");
 
     private final int index;
     private final String caption;

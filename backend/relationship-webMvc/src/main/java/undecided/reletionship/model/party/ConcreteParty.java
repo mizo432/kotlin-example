@@ -8,5 +8,7 @@ public record ConcreteParty(
         @Id
         Long partyId,
 
-        PartyType type) {
+        PartyType type,
+        String legalName,
+        String searchName) {
 }
