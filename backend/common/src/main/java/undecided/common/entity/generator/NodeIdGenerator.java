@@ -1,6 +1,9 @@
 package undecided.common.entity.generator;
 
-import java.net.InetAddress;
+import com.google.common.base.Objects;
+import undecided.common.primitive.application.ApplicationInfo;
+import undecided.common.primitive.ipadress.IpAddressProvider;
+
 import java.net.UnknownHostException;
 
 public class NodeIdGenerator {
@@ -9,8 +12,10 @@ public class NodeIdGenerator {
 
     static {
         try {
-            String hostName = InetAddress.getLocalHost().getHostName();
-            nodeId = Math.abs((long) hostName.hashCode());
+            String hostName = IpAddressProvider.ipAddress();
+            String applicationName = ApplicationInfo.name();
+            Long serverPort = ApplicationInfo.port();
+            nodeId = Math.abs((long) Objects.hashCode(hostName, applicationName, serverPort));
         } catch (UnknownHostException e) {
             nodeId = (int) (Math.random() * (Math.pow(2, 10) - 1));
         }

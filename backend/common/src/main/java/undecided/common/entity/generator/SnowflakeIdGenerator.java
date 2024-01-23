@@ -51,5 +51,6 @@ public class SnowflakeIdGenerator {
 
     public void initialise() {
         lastTimestamp = -62167252739000L;
+        
     }
 }
