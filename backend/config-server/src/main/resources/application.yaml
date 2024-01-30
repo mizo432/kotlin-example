@@ -31,9 +31,9 @@ management:
 logging:
   file:
     name: ./build/logs/configServerApplication.log
-#  level:
-#    web: WARN
-#    root: warn
+  level:
+    #    web: WARN
+    root: warn
 
 
 

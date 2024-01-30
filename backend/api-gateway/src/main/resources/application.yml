@@ -45,8 +45,8 @@ spring:
 logging:
   file:
     name: ./build/logs/ApiGatewayApplication.log
-#  level:
-#    web: WARN
-#    root: warn
+  level:
+    #    web: WARN
+    root: warn
 
 
