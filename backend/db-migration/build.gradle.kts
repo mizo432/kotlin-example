@@ -1,10 +1,10 @@
 plugins {
     id("idea")
     id("java")
-    id("com.github.ben-manes.versions") version "0.48.0"
+    id("com.github.ben-manes.versions") version "0.51.0"
     id("se.patrikerdes.use-latest-versions") version "0.2.18"
     id("com.gorylenko.gradle-git-properties") version "2.4.1"
-    id("org.flywaydb.flyway") version "10.4.1"
+    id("org.flywaydb.flyway") version "10.7.1"
 }
 
 buildscript {
@@ -12,9 +12,9 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.flywaydb:flyway-database-postgresql:10.4.1")
+        classpath("org.flywaydb:flyway-database-postgresql:10.7.1")
         /*MySQL5.7に対応してそうなバージョンをググッて適当に設定*/
-        classpath("org.postgresql:postgresql:42.5.4")
+        classpath("org.postgresql:postgresql:42.7.1")
     }
 }
 
@@ -26,8 +26,8 @@ repositories {
 }
 
 //dependencies {
-//    implementation("org.flywaydb:flyway-database-postgresql:10.4.0")
-//    runtimeOnly("org.postgresql:postgresql:42.5.4")
+//    implementation("org.flywaydb:flyway-database-postgresql:10.7.1")
+//    runtimeOnly("org.postgresql:postgresql:42.7.1")
 //
 //}
 

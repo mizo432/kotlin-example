@@ -3,7 +3,7 @@ plugins {
     idea
     id("org.springframework.boot") version "3.2.2"
     id("io.spring.dependency-management") version "1.1.4"
-    id("com.github.ben-manes.versions") version "0.48.0"
+    id("com.github.ben-manes.versions") version "0.51.0"
     id("se.patrikerdes.use-latest-versions") version "0.2.18"
     id("com.gorylenko.gradle-git-properties") version "2.4.1"
 
@@ -48,7 +48,7 @@ dependencies {
     implementation("io.zipkin.reporter2:zipkin-reporter-brave")
     implementation("io.micrometer:micrometer-tracing-bridge-brave")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
-    implementation("io.netty:netty-resolver-dns-native-macos:4.1.80.Final:osx-aarch_64")
+    implementation("io.netty:netty-resolver-dns-native-macos:4.1.106.Final:osx-aarch_64")
     implementation("org.flywaydb:flyway-core")
     runtimeOnly("org.postgresql:postgresql")
     annotationProcessor("org.projectlombok:lombok")
