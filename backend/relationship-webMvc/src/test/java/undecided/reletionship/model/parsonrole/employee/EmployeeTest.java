@@ -1,7 +1,8 @@
 package undecided.reletionship.model.parsonrole.employee;
 
 import org.junit.jupiter.api.Test;
-import undecided.reletionship.model.party.person.Person;
+import undecided.reletionship.parsonrole.model.employee.Employee;
+import undecided.reletionship.party.model.person.Person;
 
 import java.time.LocalDate;
 

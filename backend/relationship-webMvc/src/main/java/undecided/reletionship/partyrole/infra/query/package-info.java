@@ -1,0 +1,1 @@
+package undecided.reletionship.partyrole.infra.query;

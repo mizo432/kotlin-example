@@ -29,7 +29,7 @@ dependencies {
     implementation("jakarta.persistence:jakarta.persistence-api")
     implementation("io.micrometer:micrometer-tracing-bridge-brave")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
-    implementation("org.flywaydb:flyway-core")
+    implementation("org.flywaydb:flyway-core:10.7.1")
 
 }
 

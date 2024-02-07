@@ -31,7 +31,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.flywaydb:flyway-core")
     implementation("org.jetbrains:annotations:24.1.0")
-
+    implementation("org.springframework.boot:spring-boot-starter-aop")
 }
 
 tasks.test {

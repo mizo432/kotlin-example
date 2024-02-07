@@ -7,19 +7,19 @@ spring:
     gateway:
       routes:
         - id: admin-server
-          uri: lb://admin-server/admin
+          uri: lb://admin-server
           predicates:
             - Path=/admin/**
 
         - id: address-service
           uri: lb://address-service
           predicates:
-            - Path=/api/{apiVersion}/address/**
+            - Path=/address/api/{apiVersion}/**
 
         - id: relationship-service
           uri: lb://relationship-service
           predicates:
-            - Path=/api/{apiVersion}/party/**,/api/{apiVersion}/party-role/**,/api/{apiVersion}/person-role/**,/api/{apiVersion}/organization-role/**
+            - Path=/party/api/{apiVersion}/**,/party-role/api/{apiVersion}/**,/person-role/api/{apiVersion}/**,/organization-role/api/{apiVersion}/**
 
         - id: adjustment-and-support-service
           uri: lb://adjustment-and-support-service

@@ -11,7 +11,7 @@ import undecided.adress.buisiness.query.municipal.MunicipalQuery;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/api/v1/address/municipals")
+@RequestMapping(path = "/address/api/v1/municipals")
 public class MunicipalResource {
     private final static Logger log = LoggerFactory.getLogger(MunicipalResource.class);
     private final MunicipalQuery municipalQuery;

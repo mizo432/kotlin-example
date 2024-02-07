@@ -1,9 +1,10 @@
 package undecided.reletionship.model.parsonrole.projectadmin;
 
+import org.junit.jupiter.api.Test;
+import undecided.reletionship.parsonrole.model.projectadmin.ProjectAdministrator;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
-
-import org.junit.jupiter.api.Test;
 
 class ProjectAdministratorTest {
     /**
