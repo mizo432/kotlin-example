@@ -1,13 +1,14 @@
-package undecided.projactmgmt.request.api;
+package undecided.projactmgmt.request.presentation.api;
 
 import io.micrometer.observation.annotation.Observed;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import reactor.core.publisher.Mono;
 import undecided.projactmgmt.request.model.dummy.DummyClient;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("/api/v1/projects")
+@RequestMapping("/project/api/v1/projects")
 public class ProjectResource {
     private final DummyClient dummyClient;
 
@@ -17,7 +18,7 @@ public class ProjectResource {
 
     @RequestMapping
     @Observed
-    public Mono<String> getMessage() {
+    public List<String> getMessage() {
         return dummyClient.getMessage();
 
     }

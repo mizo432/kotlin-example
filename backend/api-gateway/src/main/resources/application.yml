@@ -10,31 +10,26 @@ spring:
           uri: lb://admin-server
           predicates:
             - Path=/admin/**
-
         - id: address-service
           uri: lb://address-service
           predicates:
             - Path=/address/api/{apiVersion}/**
-
         - id: relationship-service
           uri: lb://relationship-service
           predicates:
             - Path=/party/api/{apiVersion}/**,/party-role/api/{apiVersion}/**,/person-role/api/{apiVersion}/**,/organization-role/api/{apiVersion}/**
-
         - id: adjustment-and-support-service
           uri: lb://adjustment-and-support-service
           predicates:
-            - Path=/api/{apiVersion}/account/**
-
+            - Path=/account/api/{apiVersion}/**,/project/api/{apiVersion}/**,/document/api/{apiVersion}/**
         - id: sale-service
           uri: lb://sake-service
           predicates:
-            - Path=/api/{apiVersion}/cash-sales/**
-
+            - Path=/cash-sales/api/{apiVersion}/**
         - id: manufacturing-or-procurement-service
           uri: lb://manufacturing-or-procurement-service
           predicates:
-            - Path=/api/{apiVersion}/manu-process/**,/api/{apiVersion}/material-resources/**,/api/{apiVersion}/inventory/**
+            - Path=/manu-process/api/{apiVersion}/**,/material-resources/api/{apiVersion}/**,/inventory/api/{apiVersion}/**
       httpclient:
         pool:
           max-idle-time: 55s

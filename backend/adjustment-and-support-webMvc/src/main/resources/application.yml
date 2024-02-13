@@ -15,8 +15,8 @@ spring:
       maximum-pool-size: 10
   jpa:
     database: postgresql
-    hibernate:
-      ddl-auto: update
+    #    hibernate:
+    #      ddl-auto: update
     show-sql: true
   flyway:
     url: jdbc:postgresql://localhost:5432/projectName
@@ -37,5 +37,7 @@ logging:
     name: ./build/logs/adjustmentAndSupportServiceApplication.log
   pattern:
     level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+  level:
+    web: warn
 
 
