@@ -6,3 +6,4 @@ build/
 .idea/
 /out
 /out/
+/dev/env/redis/data/redis/dump.rdb
