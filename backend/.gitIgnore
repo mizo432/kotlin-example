@@ -22,15 +22,18 @@ build/
 .idea/**/dataSources.ids
 .idea/**/dataSources.local.xml
 .idea/**/sqlDataSources.xml
+.idea/**/dataSources.xml
+/.idea/**/dataSources.xml
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
+.idea/**/CoverUsage.xml
+/.idea/**/CoverUsage.xml
 
 # Gradle
 .idea/**/gradle.xml
 .idea/**/libraries
 /.idea/gradle.xml
-/.idea/modules.xml
 
 # Mongo Explorer plugin
 .idea/**/mongoSettings.xml
@@ -43,3 +46,4 @@ out/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
+/.idea/modules.xml
