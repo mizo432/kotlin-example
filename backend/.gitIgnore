@@ -31,3 +31,15 @@ build/
 .idea/**/libraries
 /.idea/gradle.xml
 /.idea/modules.xml
+
+# Mongo Explorer plugin
+.idea/**/mongoSettings.xml
+
+# File-based project format
+*.iws
+
+# IntelliJ
+out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
