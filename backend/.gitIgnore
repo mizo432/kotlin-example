@@ -27,8 +27,8 @@ build/
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
-.idea/**/CoverUsage.xml
-/.idea/**/CoverUsage.xml
+.idea/CoverUsage.xml
+/.idea/CoverUsage.xml
 
 # Gradle
 .idea/**/gradle.xml
