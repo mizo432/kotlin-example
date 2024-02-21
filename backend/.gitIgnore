@@ -1,9 +1,7 @@
 build/
 .gradle/
-.idea/
 .jpb/
 .out/
-.idea/
 /out
 /out/
 /dev/env/redis/data/redis/dump.rdb
