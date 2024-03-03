@@ -5,14 +5,18 @@ pipeline {
     // some block
       steps {
         echo 'building common...'
-        sh './backend/gradlew :common:build --daemon'
+        dir('backend') {
+          sh "./gradlew :common:build --daemon"
+        }
       }
     }
     stage('shared-build') {
     // some block
       steps {
         echo 'building shared...'      
-        sh './backend/gradlew :shared-webMvc:jar --daemon'
+        dir('backend') {
+          sh "./gradlew :shared-webMvc:jar --daemon"
+        }
       }
     }
     stage('build applications') {
@@ -21,14 +25,18 @@ pipeline {
         // some block
           steps {
             echo 'building address-webMvc...'      
-          sh './backend/gradlew :address-webMvc:jar --daemon'
+            dir('backend') {
+              sh "./gradlew :address-webMvc:jar --daemon"
+            }
           }
         }
         stage('build relationship-webMvc') {
         // some block
           steps {
             echo 'building relationship-webMvc...'      
-          sh './backend/gradlew :relationship-webMvc:jar --daemon'
+            dir('backend') {
+              sh "./gradlew :relationship-webMvc:jar --daemon"
+            }
           }
         }
       }
