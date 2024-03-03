@@ -10,6 +10,7 @@ create table adjustment.projects
     description        varchar(1000),
     estimated_duration INTEGER,
     estimated_cost     INTEGER,
+    budget             INTEGER,
     primary key (project_id)
 
 );
