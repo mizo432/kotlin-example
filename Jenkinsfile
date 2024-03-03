@@ -12,6 +12,8 @@ pipeline {
     // some block
       steps {
         echo 'building shared...'      
+        sh 'cd ./backend'
+        sh './gradlew --version'
       }
     }
     stage('build') {
