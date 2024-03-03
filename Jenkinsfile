@@ -5,15 +5,14 @@ pipeline {
     // some block
       steps {
         echo 'building common...'
-        sh './backend/gradlew --version'
+        sh './backend/gradlew :common:build --daemon'
       }
     }
     stage('shared-build') {
     // some block
       steps {
         echo 'building shared...'      
-        sh 'cd ./backend'
-        sh './gradlew --version'
+        sh './backend/gradlew :shared-webMvc:jar --daemon'
       }
     }
     stage('build') {
