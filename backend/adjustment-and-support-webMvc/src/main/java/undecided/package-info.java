@@ -1,1 +1,4 @@
+/**
+ * アプリケーションルート.
+ */
 package undecided;
