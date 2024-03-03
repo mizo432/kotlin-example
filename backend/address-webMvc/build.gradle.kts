@@ -42,7 +42,7 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j")
     implementation("org.springframework.cloud:spring-cloud-starter-config")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    implementation("io.zipkin.reporter2:zipkin-reporter-brave:3.3.0")
+    implementation("io.zipkin.reporter2:zipkin-reporter-brave")
     implementation("io.micrometer:micrometer-tracing-bridge-brave")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     implementation("io.netty:netty-resolver-dns-native-macos:4.1.106.Final:osx-aarch_64")

@@ -1,7 +1,7 @@
 plugins {
     java
     idea
-    id("org.springframework.boot") version "3.2.2"
+    id("org.springframework.boot") version "3.2.3"
     id("io.spring.dependency-management") version "1.1.4"
     id("com.github.ben-manes.versions") version "0.51.0"
     id("se.patrikerdes.use-latest-versions") version "0.2.18"
@@ -43,7 +43,7 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j")
     implementation("org.springframework.cloud:spring-cloud-starter-config")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    implementation("io.zipkin.reporter2:zipkin-reporter-brave:3.2.1")
+    implementation("io.zipkin.reporter2:zipkin-reporter-brave")
     implementation("io.micrometer:micrometer-tracing-bridge-brave")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     implementation("io.netty:netty-resolver-dns-native-macos:4.1.106.Final:osx-aarch_64")
