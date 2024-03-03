@@ -28,7 +28,7 @@ public class EmployeeQueryImpl implements EmployeeQuery {
     public List<EmployeeDto> findAll() {
         return employeeRepository.findAll().stream()
                 .map(employee -> {
-                    Optional<Person> person = personRepository.findById(employee.getEmployeeId());
+                    Optional<Person> person = personRepository.findById(employee.getId());
                     return EmployeeDto.reconstruct(employee, person.orElseThrow());
                 }).collect(Collectors.toList());
 
@@ -38,7 +38,7 @@ public class EmployeeQueryImpl implements EmployeeQuery {
     @Observed
     public EmployeeDto findByEmployeeNo(String employeeNo) {
         Employee employee = employeeRepository.findByEmployeeNo(employeeNo);
-        Optional<Person> personOptional = personRepository.findById(employee.getEmployeeId());
+        Optional<Person> personOptional = personRepository.findById(employee.getId());
         return EmployeeDto.reconstruct(employee, personOptional.orElseThrow());
 
     }

@@ -22,7 +22,8 @@ import java.util.Objects;
 @AllArgsConstructor
 public class Employee implements PersonRole<Employee> {
     @Id
-    private Long employeeId;
+    @Column(name = "employee_id", nullable = false)
+    private Long id;
 
     @Column(name = "employee_no")
     private String employeeNo;
@@ -34,7 +35,7 @@ public class Employee implements PersonRole<Employee> {
 
     public static Employee create(String employeeNo, Person person) {
         Employee employee = new Employee();
-        employee.setEmployeeId(person.getPersonId());
+        employee.setId(person.getPersonId());
         employee.setEmployeeNo(employeeNo);
         return employee;
     }
@@ -62,7 +63,7 @@ public class Employee implements PersonRole<Employee> {
         Class<?> thisEffectiveClass = this instanceof HibernateProxy ? ((HibernateProxy) this).getHibernateLazyInitializer().getPersistentClass() : this.getClass();
         if (thisEffectiveClass != oEffectiveClass) return false;
         Employee employee = (Employee) o;
-        return getEmployeeId() != null && Objects.equals(getEmployeeId(), employee.getEmployeeId());
+        return getId() != null && Objects.equals(getId(), employee.getId());
     }
 
     @Override

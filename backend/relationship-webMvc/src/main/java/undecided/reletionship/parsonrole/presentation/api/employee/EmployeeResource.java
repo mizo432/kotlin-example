@@ -42,7 +42,7 @@ public class EmployeeResource {
         Employee employee = employeeCommand
                 .insertEmployee(employeeDto.toEmployeeAtInsert());
         Person person = employeeCommand
-                .insertPerson(employeeDto.toPersonAtInsert(employee.getEmployeeId()));
+                .insertPerson(employeeDto.toPersonAtInsert(employee.getId()));
         return EmployeeDto.reconstruct(employee, person);
 
     }

@@ -29,6 +29,8 @@ build/
 .idea/**/dbnavigator.xml
 .idea/CoverUsage.xml
 /.idea/CoverUsage.xml
+.idea/**/**/**.iml
+/.idea/**/**/*.iml
 
 # Gradle
 .idea/**/gradle.xml

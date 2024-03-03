@@ -20,7 +20,7 @@ class EmployeeTest {
 
         // Assert
         assertEquals("Employee No", actualCreateResult.getEmployeeNo());
-        assertEquals(1L, actualCreateResult.getEmployeeId().longValue());
+        assertEquals(1L, actualCreateResult.getId().longValue());
     }
 
     /**
@@ -52,7 +52,7 @@ class EmployeeTest {
 
         // Assert
         assertEquals("Employee No", actualCreateResult.getEmployeeNo());
-        assertEquals(1L, actualCreateResult.getEmployeeId().longValue());
+        assertEquals(1L, actualCreateResult.getId().longValue());
     }
 
     /**
@@ -67,7 +67,7 @@ class EmployeeTest {
 
         // Assert
         assertEquals("Employee No", actualCreateAtUpdateResult.getEmployeeNo());
-        assertEquals(1L, actualCreateAtUpdateResult.getEmployeeId().longValue());
+        assertEquals(1L, actualCreateAtUpdateResult.getId().longValue());
     }
 
     /**
@@ -77,7 +77,7 @@ class EmployeeTest {
     void equals() {
         // Arrange
         Employee employee = new Employee();
-        employee.setEmployeeId(1L);
+        employee.setId(1L);
         employee.setEmployeeNo("Employee No");
 
         // Act and Assert
@@ -91,7 +91,7 @@ class EmployeeTest {
     void equals2() {
         // Arrange
         Employee employee = new Employee();
-        employee.setEmployeeId(1L);
+        employee.setId(1L);
         employee.setEmployeeNo("Employee No");
 
         // Act and Assert
@@ -110,7 +110,7 @@ class EmployeeTest {
     void equals3() {
         // Arrange
         Employee employee = new Employee();
-        employee.setEmployeeId(1L);
+        employee.setId(1L);
         employee.setEmployeeNo("Employee No");
 
         // Act and Assert
@@ -131,11 +131,11 @@ class EmployeeTest {
     void equals4() {
         // Arrange
         Employee employee = new Employee();
-        employee.setEmployeeId(1L);
+        employee.setId(1L);
         employee.setEmployeeNo("Employee No");
 
         Employee employee2 = new Employee();
-        employee2.setEmployeeId(1L);
+        employee2.setId(1L);
         employee2.setEmployeeNo("Employee No");
 
         // Act and Assert
@@ -151,11 +151,11 @@ class EmployeeTest {
     void equals5() {
         // Arrange
         Employee employee = new Employee();
-        employee.setEmployeeId(2L);
+        employee.setId(2L);
         employee.setEmployeeNo("Employee No");
 
         Employee employee2 = new Employee();
-        employee2.setEmployeeId(1L);
+        employee2.setId(1L);
         employee2.setEmployeeNo("Employee No");
 
         // Act and Assert
@@ -169,11 +169,11 @@ class EmployeeTest {
     void equals6() {
         // Arrange
         Employee employee = new Employee();
-        employee.setEmployeeId(null);
+        employee.setId(null);
         employee.setEmployeeNo("Employee No");
 
         Employee employee2 = new Employee();
-        employee2.setEmployeeId(1L);
+        employee2.setId(1L);
         employee2.setEmployeeNo("Employee No");
 
         // Act and Assert

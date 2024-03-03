@@ -9,7 +9,7 @@ public record EmployeeDto(Long employeeId, String employeeNo, String firstName, 
                           LocalDate dateOfBirth) {
 
     public static EmployeeDto reconstruct(Employee employee, Person person) {
-        return new EmployeeDto(employee.getEmployeeId(), employee.getEmployeeNo(), person.getFirstName(), person.getLastName(), person.getDateOfBirth());
+        return new EmployeeDto(employee.getId(), employee.getEmployeeNo(), person.getFirstName(), person.getLastName(), person.getDateOfBirth());
 
     }
 
