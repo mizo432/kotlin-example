@@ -1,5 +1,6 @@
 pipeline {
   agent any
+  stages {
   stage('build') {
     // some block
     steps {
@@ -18,4 +19,5 @@ pipeline {
       echo 'deploying pipeline...'      
     }
 　　　　}
+  }
 }
