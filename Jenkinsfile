@@ -4,7 +4,8 @@ pipeline {
     stage('common-build') {
     // some block
       steps {
-        echo 'building common...'      
+        echo 'building common...'
+        sh './backend/gradlew --version'
       }
     }
     stage('shared-build') {
