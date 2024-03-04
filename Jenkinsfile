@@ -1,8 +1,5 @@
 pipeline {
   agent any
-  tools {
-        jdk jdk21
-  }
   stages {
     stage('common-build') {
     // some block
