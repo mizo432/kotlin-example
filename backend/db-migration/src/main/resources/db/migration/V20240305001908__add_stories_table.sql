@@ -1,6 +1,7 @@
 create table adjustment.stories
 (
     story_id                        bigInt,
+    project_id                      bigInt,
     story_type                      varchar(10),
     name                            varchar(128),
     story_status                    varchar(20),
