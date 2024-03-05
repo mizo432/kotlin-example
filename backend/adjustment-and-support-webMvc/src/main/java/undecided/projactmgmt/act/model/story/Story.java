@@ -3,6 +3,7 @@ package undecided.projactmgmt.act.model.story;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.proxy.HibernateProxy;
+import undecided.shared.entity.id.SnowflakeId;
 
 import java.util.Objects;
 
@@ -48,6 +49,11 @@ public class Story {
 //    maximum: 99
     private Integer effort;
     private String affectVersion;
+
+    public static Story create(Long projectId, String name, String description, String notes, StoryType type, Satisfactions fullyImplementedSatisfactions, Satisfactions notImplementedSatisfactions, Long featureId, Long dependsOnStoryId, Long creatorId, Long parentSprintId, String affectVersion) {
+        return new Story(SnowflakeId.newInstance().getValue(), projectId, name, description, notes, StoryStatus.initial(), type, Rank.calculateFrom(fullyImplementedSatisfactions, notImplementedSatisfactions).getValue(), fullyImplementedSatisfactions, notImplementedSatisfactions, featureId, dependsOnStoryId, creatorId, null, null, affectVersion);
+
+    }
 
     @Override
     public final boolean equals(Object o) {
