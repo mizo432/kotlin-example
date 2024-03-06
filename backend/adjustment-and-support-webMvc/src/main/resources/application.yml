@@ -13,6 +13,7 @@ spring:
       connection-timeout: 60000                  # Default: 30000 (30 seconds)
       minimum-idle: 2                           # Default: same as maximumPoolSize
       maximum-pool-size: 10
+      schema: adjustment
   jpa:
     database: postgresql
     #    hibernate:
