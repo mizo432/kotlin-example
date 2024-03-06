@@ -2,6 +2,7 @@ package undecided.projactmgmt.request.model.feature;
 
 import jakarta.persistence.*;
 import lombok.*;
+import undecided.shared.entity.id.SnowflakeId;
 
 @Entity
 @Table(name = "features", schema = "adjustment", uniqueConstraints = {
@@ -27,4 +28,7 @@ public class Feature {
     @Column(length = 3000)
     String notes;
 
+    public static Feature createAtInsert(Long projectId, String code, String name, String description, String notes) {
+        return new Feature(SnowflakeId.newInstance().getValue(), projectId, code, name, description, notes);
+    }
 }
