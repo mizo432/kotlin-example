@@ -17,6 +17,7 @@ public enum Rank {
 
     public Integer getValue() {
         return getBusinessValue();
+        
     }
 
     Rank(String displayName, Integer businessValue) {
