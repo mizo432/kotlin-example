@@ -15,6 +15,7 @@ public enum Satisfactions {
 
     Satisfactions(String displayName) {
         this.displayName = displayName;
+        
     }
 
 }
