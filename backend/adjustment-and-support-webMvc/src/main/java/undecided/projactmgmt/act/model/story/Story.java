@@ -70,4 +70,8 @@ public class Story {
     public final int hashCode() {
         return this instanceof HibernateProxy ? ((HibernateProxy) this).getHibernateLazyInitializer().getPersistentClass().hashCode() : getClass().hashCode();
     }
+
+    public Story setValue(Satisfactions fullyImplementedSatisfactions, Satisfactions notImplementedSatisfactions) {
+        return new Story(id, projectId, name, description, notes, state, type, Rank.calculateFrom(fullyImplementedSatisfactions, notImplementedSatisfactions).getValue(), fullyImplementedSatisfactions, notImplementedSatisfactions, featureId, dependsOnStoryId, creatorId, parentSprintId, effort, affectVersion);
+    }
 }
