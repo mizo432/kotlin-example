@@ -11,7 +11,7 @@ import undecided.adress.buisiness.query.prefecture.PrefectureDto;
 import undecided.adress.buisiness.query.prefecture.PrefectureQuery;
 
 @RestController
-@RequestMapping(path = "/address/api/v1/prefectures")
+@RequestMapping(path = "/api/v1/prefectures")
 public class PrefectureResource {
     private final static Logger log = LoggerFactory.getLogger(PrefectureResource.class);
     private final PrefectureQuery prefectureQuery;

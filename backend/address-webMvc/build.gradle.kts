@@ -47,7 +47,7 @@ dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     implementation("io.netty:netty-resolver-dns-native-macos:4.1.106.Final:osx-aarch_64")
     implementation("org.flywaydb:flyway-core")
-    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.16.1")
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.16.2")
     runtimeOnly("org.postgresql:postgresql:42.7.1")
     annotationProcessor("org.projectlombok:lombok")
     compileOnly("org.projectlombok:lombok")
