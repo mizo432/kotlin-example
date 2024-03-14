@@ -22,6 +22,7 @@ repositories {
 dependencies {
     implementation(project(":common"))
     implementation("org.springframework.boot:spring-boot-starter-actuator")
+    implementation("com.google.guava:guava:32.1.3-jre")
     testImplementation(platform("org.junit:junit-bom"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     implementation("org.springframework.boot:spring-boot-starter")

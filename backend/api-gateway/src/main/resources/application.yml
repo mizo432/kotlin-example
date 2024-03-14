@@ -14,6 +14,8 @@ spring:
           uri: lb://address-service
           predicates:
             - Path=/address/api/{apiVersion}/**
+          filters:
+            - RewritePath=/address/?(?<segment>.*), /$\{segment}
         - id: relationship-service
           uri: lb://relationship-service
           predicates:
