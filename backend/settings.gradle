@@ -12,4 +12,5 @@ include 'adjustment-and-support-webMvc'
 include 'db-migration'
 include 'admin-server'
 include 'auth-appl'
+include 'allInOneWebFlux'
 
