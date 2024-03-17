@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/address-webMvc" />
+            <option value="$PROJECT_DIR$/adjustment-and-support-webMvc" />
+            <option value="$PROJECT_DIR$/admin-server" />
+            <option value="$PROJECT_DIR$/allInOneWebFlux" />
+            <option value="$PROJECT_DIR$/api-gateway" />
+            <option value="$PROJECT_DIR$/auth-appl" />
+            <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/config-server" />
+            <option value="$PROJECT_DIR$/db-migration" />
+            <option value="$PROJECT_DIR$/manufacturingOrProcurement-webMvc" />
+            <option value="$PROJECT_DIR$/relationship-webMvc" />
+            <option value="$PROJECT_DIR$/sale-webMvc" />
+            <option value="$PROJECT_DIR$/service-registry" />
+            <option value="$PROJECT_DIR$/shared-webMvc" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
