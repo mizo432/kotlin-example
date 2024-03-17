@@ -32,6 +32,10 @@ spring:
           uri: lb://manufacturing-or-procurement-service
           predicates:
             - Path=/manu-process/api/{apiVersion}/**,/material-resources/api/{apiVersion}/**,/inventory/api/{apiVersion}/**
+        - id: all-in-one-service
+          uri: lb://all-in-one-service
+          predicates:
+            - Path=/all-in-one/api/{apiVersion}/**
       httpclient:
         pool:
           max-idle-time: 55s

@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: all-in-one-service
+  config:
+    import: "optional:configserver:http://localhost:8888"
+  lifecycle:
+    timeout-per-shutdown-phase: 15s
+  threads:
+    virtual:
+      enabled: true
+  r2dbc:
+    #spring.data.r2dbc.repositories.enabled=true
+    url: r2dbc:postgresql://localhost:5432/projectName
+    username: user
+    password: password
+server:
+  shutdown: graceful
+logging:
+  file:
+    name: ./build/logs/all-in-oneServiceApplication.log
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+  level:
+    undecided: info
+    web: warn
+
