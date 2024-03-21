@@ -1,0 +1,78 @@
+version: "3.9"
+
+services:
+  workspace:
+    container_name: ${PROJECT_NAME:-default}-workspace-container
+    build:
+      context: ./docker/workspace
+      args:
+        USERNAME: ${USERNAME:-vscode}
+        USER_GROUP_NAME: ${USER_GROUP_NAME:-workspace}
+        USER_UID: ${USER_UID:-1000}
+        USER_GID: ${USER_GID:-1000}
+    tty: true
+
+    volumes:
+      - ../:/home/${USERNAME:-vscode}/workspace:cached
+    working_dir: /workspace
+
+  rabbitMQ:
+    image: rabbitmq:3.13-management-alpine
+    container_name: ${PROJECT_NAME:-default}-rabbitMQ-container
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - ./.docker/rabbitmq/data:/var/lib/rabbitmq
+      - ./.docker/rabbitmq/log:/var/log/rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USERNAME:-rabbitmq}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD:-rabbitmq}
+
+  postgres:
+    container_name: ${PROJECT_NAME:-default}-postgres-container
+    restart: unless-stopped
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
+      PGPASSWORD: ${PGPASSWORD:-password123}
+      POSTGRES_DB: ${POSTGRES_DB:-projectName}
+      TZ: "Asia/Tokyo"
+    ports:
+      - 5432:5432
+    volumes:
+      - ./.docker/postgres/data:/var/lib/postgresql/data
+
+  redis:
+    container_name: ${PROJECT_NAME:-default}-redis-container
+    image: "redis:latest"
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - "./.docker/redis/data:/data"
+  # The zipkin process services the UI, and also exposes a POST endpoint that
+  # instrumentation can send trace data to.
+
+  zipkin:
+    image: ghcr.io/openzipkin/zipkin-slim:${TAG:-latest}
+    container_name: ${PROJECT_NAME:-default}-zipkin-container
+    # Environment settings are defined here https://github.com/openzipkin/zipkin/blob/master/zipkin-server/README.md#environment-variables
+    environment:
+      - STORAGE_TYPE=mem
+      # Point the zipkin at the storage backend
+      - MYSQL_HOST=mysql
+      # Uncomment to enable self-tracing
+      # - SELF_TRACING_ENABLED=true
+      # Uncomment to increase heap size
+      # - JAVA_OPTS=-Xms128m -Xmx128m -XX:+ExitOnOutOfMemoryError
+    ports:
+      # Port used for the Zipkin UI and HTTP Api
+      - 9411:9411
+    # Uncomment to enable debug logging
+    # command: --logging.level.zipkin2=DEBUG
+
+volumes:
+  postgres:
+    external: true

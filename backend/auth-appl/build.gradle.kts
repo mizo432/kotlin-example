@@ -1,6 +1,6 @@
 plugins {
     java
-    id("org.springframework.boot") version "3.1.7"
+    id("org.springframework.boot") version "3.2.3"
     id("io.spring.dependency-management") version "1.1.4"
 }
 
@@ -14,7 +14,7 @@ java {
 repositories {
     mavenCentral()
 }
-extra["springCloudVersion"] = "2022.0.4"
+extra["springCloudVersion"] = "2023.0.0"
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-oauth2-authorization-server")
