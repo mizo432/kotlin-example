@@ -59,6 +59,7 @@ local.properties
 .scala_dependencies
 .worksheet
 .devcontainer/.docker/rabbitmq/data/
+.devcontainer/.docker/rabbitmq/log/
 .devcontainer/.docker/postgres/data/
 .devcontainer/.docker/redis/data/
 
