@@ -1,19 +1,20 @@
 package undecided.projactmgmt.act.presentation.api.story;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import undecided.projactmgmt.act.application.command.story.AddStoryCommand;
+import undecided.projactmgmt.act.application.command.story.ApproveStoryCommand;
 import undecided.projactmgmt.act.application.query.story.StoryDto;
 import undecided.projactmgmt.act.model.story.Story;
 
 @RestController
 @RequestMapping(path = "/project/api/v1")
+@RequiredArgsConstructor
 public class StoryResource {
 
     private final AddStoryCommand addStoryCommand;
 
-    public StoryResource(AddStoryCommand addStoryCommand) {
-        this.addStoryCommand = addStoryCommand;
-    }
+    private final ApproveStoryCommand approveStoryCommand;
 
 
     @PostMapping(path = "/project/{projectId}/stories")
@@ -24,4 +25,13 @@ public class StoryResource {
         return StoryDto.convertFromEntity(story);
 
     }
+
+    @PatchMapping(path = "/project/{projectId}/stories/{storyId}/approve")
+    public StoryDto approve(@PathVariable("projectId") Long ignoredProjectId, @PathVariable("storyId") Long storyId) {
+
+        Story story = approveStoryCommand.execute(storyId);
+        return StoryDto.convertFromEntity(story);
+
+    }
+
 }
