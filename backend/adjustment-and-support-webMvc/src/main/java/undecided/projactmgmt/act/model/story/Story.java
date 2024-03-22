@@ -81,4 +81,10 @@ public class Story {
             throw new IllegalStateBusinessException("ストーリーの状態が誤っています");
         return new Story(id, projectId, name, description, notes, StoryStatus.ACCEPTED, type, rank, fullyImplementedSatisfactions, notImplementedSatisfactions, featureId, dependsOnStoryId, creatorId, parentSprintId, effort, affectVersion);
     }
+
+    public Story estimate(Integer effort) {
+        if (!state.canEstimate())
+            throw new IllegalStateBusinessException("ストーリーの状態が誤っています");
+        return new Story(id, projectId, name, description, notes, StoryStatus.ESTIMATED, type, rank, fullyImplementedSatisfactions, notImplementedSatisfactions, featureId, dependsOnStoryId, creatorId, parentSprintId, effort, affectVersion);
+    }
 }

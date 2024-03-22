@@ -2,6 +2,8 @@ package undecided.projactmgmt.act.model.story;
 
 import lombok.Getter;
 
+import java.util.EnumSet;
+
 @Getter
 public enum StoryStatus {
     SUGGESTED("sandbox", 1),
@@ -25,5 +27,9 @@ public enum StoryStatus {
     public static StoryStatus initial() {
         return StoryStatus.SUGGESTED;
 
+    }
+
+    public boolean canEstimate() {
+        return EnumSet.of(StoryStatus.ESTIMATED, StoryStatus.ACCEPTED).contains(this);
     }
 }
