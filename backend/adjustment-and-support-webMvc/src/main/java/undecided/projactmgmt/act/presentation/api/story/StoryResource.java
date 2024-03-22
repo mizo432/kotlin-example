@@ -27,7 +27,7 @@ public class StoryResource {
     }
 
     @PatchMapping(path = "/project/{projectId}/stories/{storyId}/approve")
-    public StoryDto approve(@PathVariable("projectId") Long projectId, @PathVariable("storyId") Long storyId) {
+    public StoryDto approve(@PathVariable("projectId") Long ignoredProjectId, @PathVariable("storyId") Long storyId) {
 
         Story story = approveStoryCommand.execute(storyId);
         return StoryDto.convertFromEntity(story);
