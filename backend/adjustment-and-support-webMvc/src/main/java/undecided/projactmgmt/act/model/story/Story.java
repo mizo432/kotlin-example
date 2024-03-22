@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.proxy.HibernateProxy;
 import undecided.shared.entity.id.SnowflakeId;
+import undecided.shared.exception.IllegalStateBusinessException;
 
 import java.util.Objects;
 
@@ -73,5 +74,11 @@ public class Story {
 
     public Story setValue(Satisfactions fullyImplementedSatisfactions, Satisfactions notImplementedSatisfactions) {
         return new Story(id, projectId, name, description, notes, state, type, Rank.calculateFrom(fullyImplementedSatisfactions, notImplementedSatisfactions).getValue(), fullyImplementedSatisfactions, notImplementedSatisfactions, featureId, dependsOnStoryId, creatorId, parentSprintId, effort, affectVersion);
+    }
+
+    public Story approve() {
+        if (state != StoryStatus.SUGGESTED)
+            throw new IllegalStateBusinessException("ストーリーの状態が誤っています");
+        return new Story(id, projectId, name, description, notes, StoryStatus.ACCEPTED, type, rank, fullyImplementedSatisfactions, notImplementedSatisfactions, featureId, dependsOnStoryId, creatorId, parentSprintId, effort, affectVersion);
     }
 }
